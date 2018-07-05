@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Salutem.master.cs" Inherits="Salutem.Salutem" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Salutem</title>
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="fonts.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="css/overwrite.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href='<%=Page.ResolveUrl("~/img/icon.png") %>' />
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script src='<%=Page.ResolveUrl("~/js/arriba.js") %>'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="img/icon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.24.3/sweetalert2.all.js"></script>
+    
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        });
+    </script>
+
+</head>
+<body>
+    <div class="loader"></div>
+    <span class="ir-arriba icon-arrow-up span-color"></span>
+    <header id="header">
+        <nav class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src='<%=Page.ResolveUrl("~/img/icon.png") %>' width="30" height="30" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <!-- Con este content se obtiene la palabra SALUTEM dependiendo dela vista en la que se encuentre para redireccionar -->
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                
+                <!-- Con este content se obtiene la información de la navbar-->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+            </div>
+            <!--/.container-->
+        </nav>
+        <!--/nav-->
+    </header>
+    <!--/header-->
+
+    <!-- Con este content se obtiene la información de las diferentes vistas-->
+   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!--/#our-team-->
+    <br>
+    <footer id="credits">
+        <div class="container">
+            <div class="text-center">
+                <h3>Créditos</h3>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="copyright">
+                &copy; Salutem UCR. Todos los derechos reservados.
+                <br>
+
+                <div class="credits">
+                    Desarrollado por: <br>
+                    Danny Zúñiga Barrantes <br>
+                    Priscilla Mena Monge <br>
+                    Adrian Serrano <br>
+                </div>
+            </div>
+        </div>
+  </footer>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src='<%=Page.ResolveUrl("~/js/jquery.js") %>'></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src='<%=Page.ResolveUrl("~/js/bootstrap.min.js") %>'></script>
+  <script src='<%=Page.ResolveUrl("~/js/parallax.min.js") %>'></script>
+  <script src='<%=Page.ResolveUrl("~/js/wow.min.js") %>'></script>
+  <script src='<%=Page.ResolveUrl("~/js/jquery.easing.min.js") %>'></script>
+  <script type="text/javascript" src='<%=Page.ResolveUrl("~/js/fliplightbox.min.js") %>'></script>
+  <script src='<%=Page.ResolveUrl("~/js/functions.js") %>'></script>
+  <script src='<%=Page.ResolveUrl("~/contactform/contactform.js") %>')"></script>
+  <script src='<%=Page.ResolveUrl("~/js/myJs.js") %>'></script>
+  
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+	    $('.js-tooltip-trigger').each(function(ind, ele){
+		    var $ele = $(ele),
+			    $ttSpan = $ele.next('.js-tooltip'),
+			    ttHtml = $ttSpan.html(),
+			    rndID = 'ttid'+ String(Math.random()).substr(2);
+
+		    $ttSpan.attr('id', rndID).removeAttr('style').html('');
+
+		    $ele.popover({
+			    html: true,
+			    trigger: 'focus',
+			    placement: 'bottom',
+			    container: '#'+rndID,
+			    content: ttHtml
+		    });
+	    });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+	$("[id=login]").popover({
+	html: true,
+	content: function() {
+		  return $('#popover-content').html();
+		}
+	});
+
+</script>

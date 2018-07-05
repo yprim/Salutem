@@ -1,0 +1,12 @@
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\Business.deps.json
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\Business.dll
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\Business.pdb
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\Business.AssemblyInfoInputs.cache
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\Business.AssemblyInfo.cs
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\Business.dll
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\Business.pdb
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\Data.dll
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\Data.pdb
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\Business.csprojAssemblyReference.cache
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\Business.csproj.CopyComplete

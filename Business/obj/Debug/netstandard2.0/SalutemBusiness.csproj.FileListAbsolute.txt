@@ -1,0 +1,12 @@
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\SalutemBusiness.deps.json
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\SalutemBusiness.dll
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\SalutemBusiness.pdb
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\SalutemData.dll
+C:\Users\Danny\source\repos\Salutem\Business\bin\Debug\netstandard2.0\SalutemData.pdb
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\SalutemBusiness.csprojAssemblyReference.cache
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\SalutemBusiness.csproj.CoreCompileInputs.cache
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\SalutemBusiness.AssemblyInfoInputs.cache
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\SalutemBusiness.AssemblyInfo.cs
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\SalutemBusiness.csproj.CopyComplete
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\SalutemBusiness.dll
+C:\Users\Danny\source\repos\Salutem\Business\obj\Debug\netstandard2.0\SalutemBusiness.pdb

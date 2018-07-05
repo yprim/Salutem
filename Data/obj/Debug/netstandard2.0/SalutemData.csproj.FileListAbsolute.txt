@@ -1,0 +1,9 @@
+C:\Users\Danny\source\repos\Salutem\Data\bin\Debug\netstandard2.0\SalutemData.deps.json
+C:\Users\Danny\source\repos\Salutem\Data\bin\Debug\netstandard2.0\SalutemData.dll
+C:\Users\Danny\source\repos\Salutem\Data\bin\Debug\netstandard2.0\SalutemData.pdb
+C:\Users\Danny\source\repos\Salutem\Data\obj\Debug\netstandard2.0\SalutemData.csprojAssemblyReference.cache
+C:\Users\Danny\source\repos\Salutem\Data\obj\Debug\netstandard2.0\SalutemData.csproj.CoreCompileInputs.cache
+C:\Users\Danny\source\repos\Salutem\Data\obj\Debug\netstandard2.0\SalutemData.AssemblyInfoInputs.cache
+C:\Users\Danny\source\repos\Salutem\Data\obj\Debug\netstandard2.0\SalutemData.AssemblyInfo.cs
+C:\Users\Danny\source\repos\Salutem\Data\obj\Debug\netstandard2.0\SalutemData.dll
+C:\Users\Danny\source\repos\Salutem\Data\obj\Debug\netstandard2.0\SalutemData.pdb
