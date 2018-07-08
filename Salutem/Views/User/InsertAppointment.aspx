@@ -52,30 +52,30 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-            <li class="active"><a href='<%=Page.ResolveUrl("~/Default.aspx") %>'>Home</a></li>
+            <li class="active"><a href='<%=Page.ResolveUrl("~/Default.aspx") %>'>Inicio</a></li>
 
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Manage appointment <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar citas<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/InsertAppointment.aspx") %>'> Schedule appointment</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'> Cancel appointment</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'> Update appointment</a></li>
+                    <li><a href='<%=Page.ResolveUrl("~/Views/User/InsertAppointment.aspx") %>'>Agendar cita</a></li>
+                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'>Cancelar cita</a></li> 
+                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'>Actualizar cita</a></li>
                 </ul>
             </li>
 
-            <li><a href="#credits">Credits</a></li>
+            <li><a href="#credits">Créditos</a></li>
 
             <li><a data-placement="bottom" data-toggle="popover" data-title="Iniciar Sesión" data-container="body" type="button" data-html="true" id="login">Iniciar Sesión</a></li>
 			<div id="popover-content" class="hide">
 				<form>
 					<div class="form-group">
-					    <label for="exampleInputEmail1">Email </label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					    <label for="exampleInputEmail1">Correo</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo">
 					    <small id="emailHelp" class="form-text text-muted"></small>
 					</div>
 					<div class="form-group">
-					    <label for="exampleInputPassword1">Password</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					    <label for="exampleInputPassword1">Contraseña</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
@@ -84,7 +84,7 @@
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search...">
                 <span class="input-group-btn">
-                    <button class="btn btn-info" type="button">Search</button>
+                    <button class="btn btn-info" type="button">Buscar</button>
                 </span>
             </div><!-- /input-group -->
         </ul>
@@ -93,5 +93,5 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaultSpecialist.aspx") %>'>Salutem</a>
+    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaulSpecialist.aspx") %>'>Salutem</a>
 </asp:Content>

@@ -202,19 +202,19 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#header">Home</a></li>
+            <li class="active"><a href="#header">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
 
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Manage appointment <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar citas<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/InsertAppointment.aspx") %>'> Schedule appointment</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'> Cancel appointment</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'> Update appointment</a></li>
+                    <li><a href='<%=Page.ResolveUrl("~/Views/User/InsertAppointment.aspx") %>'>Agendar cita</a></li>
+                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'>Cancelar cita</a></li> 
+                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'>Actualizar cita</a></li>
                 </ul>
             </li>
 
-            <li><a href="#credits">Credits</a></li>
+            <li><a href="#credits">Créditos</a></li>
 
             <li><a data-placement="bottom" data-toggle="popover" data-title="Iniciar Sesión" data-container="body" type="button" data-html="true" id="login">Iniciar Sesión</a></li>
 			<div id="popover-content" class="hide">
@@ -233,9 +233,9 @@
 			</div>
 
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search...">
+                <input type="text" class="form-control" placeholder="Buscar...">
                 <span class="input-group-btn">
-                    <button class="btn btn-info" type="button">Search</button>
+                    <button class="btn btn-info" type="button">Buscar</button>
                 </span>
             </div><!-- /input-group -->
         </ul>

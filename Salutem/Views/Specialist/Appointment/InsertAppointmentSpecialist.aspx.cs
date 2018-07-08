@@ -17,6 +17,7 @@ namespace Salutem.Views.Specialist
         #region
             private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
             private AppointmentBusiness appointmentBusiness = null;
+            private UserBusiness userBusiness = null;
             private Appointment appo = null;
             private Userr user = null;
             private string finalDate = "", validateMessage = "", operationMessage = "";
@@ -43,7 +44,18 @@ namespace Salutem.Views.Specialist
                 this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
                 this.appo = new Appointment(Convert.ToInt32(txtHour.Text), finalDate);
-                this.user = new Userr(txtNumCedula.Text);
+                //this.user = new Userr(txtNumCedula.Text);
+                //RSG
+                this.userBusiness = new UserBusiness(this.conn);
+                this.user = this.userBusiness.getUserData(txtNumCedula.Text);
+                if (this.user.errorMessage != null && this.user.errorMessage != "") {
+                    txtMensaje.Text = this.user.errorMessage;
+                    return;
+                }
+                if (this.user.name == null || this.user.name == "") {
+                    txtMensaje.Text = "El cliente no existe en la base de datos.";
+                    return;
+                }
 
                 //Se guarda un mensaje basado en la operación que se realizo
                 operationMessage = this.appointmentBusiness.insertAppointmentBusiness(this.appo, this.user);
