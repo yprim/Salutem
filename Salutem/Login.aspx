@@ -3,15 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="row">
-        <br>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div style="width:100%; height:300px;"></div>
         <div class="col-md-offset-4">
             <div class="col-lg-8 borderRounded">
                 <center>
@@ -20,12 +12,10 @@
                 <br>
                 <form id="form1" runat="server">
                     <div class="form-group">
-                        <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>   
+                        Correo<asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Correo"></asp:TextBox>   
                     </div>
                     <div class="form-group">
-                        <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control"  runat="server" placeholder="Password"/>
+                        Contraseña<asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control"  runat="server" placeholder="Contraseña"/>
                     </div>
 
                     <div class="form-group">
@@ -45,7 +35,7 @@
 </asp:Content>
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
 
@@ -102,7 +92,7 @@
             </li>
         </ul>
     </div>
-</asp:Content>
+</asp:Content>--%>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaulSpecialist.aspx") %>'>Salutem</a>

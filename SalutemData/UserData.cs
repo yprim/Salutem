@@ -54,6 +54,47 @@ namespace SalutemData
             return userInfo;
         }
 
+        /// <summary>
+        /// Validates if an identityCard already exists
+        /// </summary>
+        /// <param name="identityCard"></param>
+        /// <returns>True or False</returns>
+        public SalutemDomain.Userr getUserDataLogin(string email, string password) {
+            String sql = "sp_getUserrLogin";
+            SqlConnection connection = new SqlConnection(this.connectionString);
+            SalutemDomain.Userr userInfo = new SalutemDomain.Userr();
+
+            try {
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@email", email));
+                cmd.Parameters.Add(new SqlParameter("@password", password));
+
+                SqlDataReader reader;
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read()) {
+                    userInfo.id = Convert.ToInt32(reader["id"].ToString());
+                    userInfo.identityCard = reader["identityCard"].ToString();
+                    userInfo.name = reader["name"].ToString();
+                    userInfo.lastname = reader["lastname"].ToString();
+                    userInfo.age = Convert.ToInt32(reader["age"].ToString());
+                    userInfo.user_address = reader["user_address"].ToString();
+                    userInfo.position = reader["position"].ToString();
+                    userInfo.rol = reader["rol"].ToString();
+                    userInfo.email = reader["email"].ToString();
+                }
+            } catch (Exception ex) {
+                userInfo.errorMessage = ex.Message;
+            } finally {
+                connection.Close();
+            }
+
+            return userInfo;
+        }
+
         public string getRoleForUserData(string email, string password)
         {
             string message = "";

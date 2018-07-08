@@ -57,9 +57,9 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar citas<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/InsertAppointment.aspx") %>'>Agendar cita</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'>Cancelar cita</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/User/SearchAppointment.aspx") %>'>Actualizar cita</a></li>
+                    <li><a id="menuAppointmentInsert" runat="server">Agendar cita</a></li>
+                    <li><a id="menuAppointmentCancel" runat="server">Cancelar cita</a></li> 
+                    <li><a id="menuAppointmentUpdate" runat="server">Actualizar cita</a></li>
                 </ul>
             </li>
 

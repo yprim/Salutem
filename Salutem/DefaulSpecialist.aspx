@@ -30,9 +30,9 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar cita <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx") %>'> Agendar cita</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialist.aspx") %>'> Cancelar cita</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialist.aspx") %>'> Actualizar cita</a></li>
+                    <li><a id="menuAppointmentInsert" runat="server"> Agendar cita</a></li>
+                    <li><a id="menuAppointmentCancel" runat="server"> Cancelar cita</a></li> 
+                    <li><a id="menuAppointmentUpdate" runat="server"> Actualizar cita</a></li>
                 </ul>
             </li>
 

@@ -40,6 +40,16 @@
         });
     </script>
 
+    <style>
+        .sessionValue{
+    font-family: Roboto, 'Segoe UI';
+    font-size: 1.25em;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    margin-left: 87px;
+        }
+    </style>
 </head>
 <body>
     <div class="loader"></div>
@@ -59,7 +69,11 @@
                     </button>
                     
                     <!-- Con este content se obtiene la palabra SALUTEM dependiendo dela vista en la que se encuentre para redireccionar -->
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    </asp:ContentPlaceHolder>
+                        <form>
+                            <asp:Label ID="SessionName" CssClass="sessionValue" Text="" runat="server"/>
+                        </form>
                 </div>
                 
                 <!-- Con este content se obtiene la información de la navbar-->

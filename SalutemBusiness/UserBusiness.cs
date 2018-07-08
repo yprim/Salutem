@@ -21,6 +21,10 @@ namespace SalutemBusiness
             return this.userData.getUserData(identityCard);
         }
 
+        public SalutemDomain.Userr getUserData(string email, string password) {
+            return this.userData.getUserDataLogin(email, password);
+        }
+
         public string getRoleForUserBusiness(string email, string password)
         {
             string rol = "";

@@ -27,29 +27,55 @@ namespace Salutem
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string information = "";
+            try {
+                //RSG
+                //================================================================================
+                if (!string.IsNullOrEmpty(txtEmail.Text) && !string.IsNullOrEmpty(txtPassword.Text)) {
+                    userBusiness = new UserBusiness(this.conn);
+                    Userr userSession = this.userBusiness.getUserData(txtEmail.Text, txtPassword.Text);
 
-            this.userBusiness = new UserBusiness(this.conn);
+                    if (string.IsNullOrEmpty(userSession.rol)) {
+                        txtMensaje.Text = "Datos incorrectos.";
+                        txtMensaje.Visible = true;
+                        return;
+                    }
 
-            information = this.userBusiness.getRoleForUserBusiness(txtEmail.Text, txtPassword.Text);
+                    Session["rol"] = userSession.rol;
+                    Session["id"] = userSession.id;
+                    Session["identityCard"] = userSession.identityCard;
+                    Session["name"] = userSession.name;
+                    Session["lastname"] = userSession.lastname;
+                    Session["fullName"] = userSession.lastname + " " + userSession.name;
 
-            switch (information)
-            {
-                case "Specialist":
-                    Session["rol"] = "Specialist";
-                    Response.Redirect("~/DefaulSpecialist.aspx");
-                    break;
-                case "Assistant":
-                    Session["rol"] = "Assistant";
-                    Response.Redirect("~/Default.aspx");
-                    break;
-                case "Collaborator":
-                    Session["rol"] = "Collaborator";
-                    break; 
-                default:
-                    txtMensaje.Text = "Error !! el usuario con los credenciales suministrados no esta en el sistema.";
+                    ((Label)Master.FindControl("SessionName")).Text = Session["fullName"].ToString();
+                }else{
+                    txtMensaje.Text = "Por favor ingrese su correo y contraseña.";
                     txtMensaje.Visible = true;
-                    break;
+                    return;
+                }
+                //================================================================================
+
+                //string information = "";
+                //this.userBusiness = new UserBusiness(this.conn);
+                //information = this.userBusiness.getRoleForUserBusiness(txtEmail.Text, txtPassword.Text);
+
+                switch (Session["rol"]) {
+                    case "Specialist":
+                        Response.Redirect("~/DefaulSpecialist.aspx");
+                        break;
+                    case "Assistant":
+                        Response.Redirect("~/Default.aspx");
+                        break;
+                    case "Collaborator":
+                        Response.Redirect("~/Default.aspx");
+                        break;
+                    default:
+                        txtMensaje.Text = "Error !! el usuario con los credenciales suministrados no esta en el sistema.";
+                        txtMensaje.Visible = true;
+                        break;
+                }
+            } catch {
+
             }
         }
     }

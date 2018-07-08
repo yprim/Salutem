@@ -11,7 +11,13 @@ namespace Salutem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try {
+                if (!string.IsNullOrEmpty((string)Session["fullName"])) {
+                    SessionName.Text = Session["fullName"].ToString();
+                }
+            } catch {
 
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
