@@ -24,3 +24,16 @@ C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemData\obj\Debug\netstand
 C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csproj.CopyComplete
 C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.dll
 C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.pdb
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemData.deps.json
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemData.dll
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemData.pdb
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemDomain.dll
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\bin\Debug\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemDomain.pdb
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csprojResolveAssemblyReference.cache
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csproj.CoreCompileInputs.cache
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.AssemblyInfoInputs.cache
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.AssemblyInfo.cs
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csproj.CopyComplete
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.dll
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.pdb

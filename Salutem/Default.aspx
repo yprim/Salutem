@@ -14,58 +14,40 @@
 
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src='<%=Page.ResolveUrl("~/img/Convergente.jpeg") %>' class="img-responsive" alt="">
+                        <img src='<%=Page.ResolveUrl("~/img/photo/1.jpg") %>' class="img-responsive" alt="">
                         <div class="carousel-caption">
                             <div class="content"> <!-- Div con color y borde redondeado-->
                                 <br>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-                                    <h2><span>Convergente</span></h2>
+                                    <h2><span>Psicología</span></h2>
                                 </div>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
-                                    <p>El aprendizaje convergente combina la conceptualización abstracta y la experimentación activa.</p>
+                                    <p>Un colaborador con una salud integral es importante para nosotros.</p>
                                 </div>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <button type="button" name="Live Demo"
-                                            class="btn btn-info btn-lg" data-toggle="modal"
-                                            data-target="#ModalConvergenteInfo">
-                                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                                            Más información</button>
-                                        </div>
-                                        <!-- <div class="form-group">
-                                            <button type="getnow" name="Get Now" class="btn btn-primary btn-lg" required="required">Get Now</button>
-                                        </div> -->
-                                    </form>
+                             
                                 </div>
                                 <br>
                             </div>
                         </div>
                     </div>
                     <div class="item">
-                        <img src='<%=Page.ResolveUrl("~/img/Asimilador.jpeg") %>' class="img-responsive" alt="">
+                        <img src='<%=Page.ResolveUrl("~/img/photo/2.jpg") %>' class="img-responsive" alt="">
                         <div class="carousel-caption">
                             <div class="content"> <!-- Div con color y borde redondeado-->
                                 <br>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-                                    <h2><span>Asimilador</span></h2>
+                                    <h2><span>Terapia Física</span></h2>
                                 </div>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
-                                    <p>El aprendizaje asimilador combina la conceptualización abstracta y la observación reflexiva.</p>
+                                    <p>La salud física de nustros colaboradores es importante para nosotros.</p>
                                 </div>
 
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
                                     <form class="form-inline">
                                         <div class="form-group">
-                                            <button type="button" name="purchase"
-                                            class="btn btn-info btn-lg" data-toggle="modal"
-                                            data-target="#ModalAsimiladorInfo">
-                                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                                            Más información</button>
+                                                     
                                         </div>
-                                        <!-- <div class="form-group">
-                                            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Get Now</button>
-                                        </div>-->
                                     </form>
                                 </div>
                                 <br>
@@ -74,57 +56,41 @@
                     </div>
 
                     <div class="item">
-                        <img src='<%=Page.ResolveUrl("~/img/Divergente.jpeg") %>' class="img-responsive" alt="">
+                        <img src='<%=Page.ResolveUrl("~/img/photo/3.jpg") %>' class="img-responsive" alt="">
                         <div class="carousel-caption">
                             <div class="content"> <!-- Div con color y borde redondeado-->
                                 <br>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">
-                                    <h2>Divergente</h2>
+                                    <h2>Consultorio Médico</h2>
                                 </div>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.3s">
-                                    <p>El aprendizaje divergente combina la experiencia concreta y la observación reflexiva.</p>
+                                    <p>Los checkeos médicos son fundamentales para la prevención de enfermedades.</p>
                                 </div>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.6s">
                                     <form class="form-inline">
                                         <div class="form-group">
-                                            <button type="button" name="purchase"
-                                            class="btn btn-info btn-lg" data-toggle="modal"
-                                            data-target="#ModalDivergenteInfo">
-                                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                                            Más información</button>
+                                        
                                         </div>
-                                        <!-- <div class="form-group">
-                                            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Get Now</button>
-                                        </div>-->
-                                    </form>
+                                      </form>
                                 </div>
                                 <br>
                             </div>
                         </div>
                     </div>
                     <div class="item">
-                        <img src='<%=Page.ResolveUrl("~/img/Acomodador.jpeg") %>' class="img-responsive" alt="">
+                        <img src='<%=Page.ResolveUrl("~/img/photo/4.jpg") %>' class="img-responsive" alt="">
                         <div class="carousel-caption">
                             <div class="content"> <!-- Div con color y borde redondeado-->
                                 <br>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-                                    <h2>Acomodador</h2>
+                                    <h2>Odontología</h2>
                                 </div>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
-                                    <p>El aprendizaje acomodador combina la experiencia concreta y la experimentación activa</p>
+                                    <p>Cuida tu salud bucodental con nosotros, es tan importante como la salud física.</p>
                                 </div>
                                 <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
                                     <form class="form-inline">
-                                        <div class="form-group">
-                                            <button type="button" name="purchase"
-                                            class="btn btn-info btn-lg" data-toggle="modal"
-                                            data-target="#ModalAcomodadorInfo">
-                                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                                            Más información</button>
-                                        </div>
-                                        <!-- <div class="form-group">
-                                            <button type="getnow" name="subscribe" class="btn btn-primary btn-lg" required="required">Get Now</button>
-                                        </div> -->
+                                      
                                     </form>
                                 </div>
                                 <br>
@@ -156,9 +122,9 @@
                 <figure class="effect-chico">
                     <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <a data-toggle="modal" data-target="#ModalConvergenteVideo">
-                            <img src='<%=Page.ResolveUrl("~/img/work/Convergente.jpeg") %>' class="img-responsive" alt="">
+                            <img src='<%=Page.ResolveUrl("~/img/team/1.jpg") %>' class="img-responsive" alt="">
                             <div class="middle">
-                                <div class="text">Convergente</div>
+                                <div class="text">Odontología</div>
                             </div>
                         </a>
                     </div>
@@ -166,9 +132,9 @@
                 <figure class="effect-chico">
                     <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <a data-toggle="modal" data-target="#ModalAsimiladorVideo">
-                            <img src='<%=Page.ResolveUrl("~/img/work/Asimilador.jpeg") %>' class="img-responsive" alt="">
+                            <img src='<%=Page.ResolveUrl("~/img/team/2.jpg") %>' class="img-responsive" alt="">
                             <div class="middle">
-                                <div class="text">Asimilador</div>
+                                <div class="text">Medicina General</div>
                             </div>
                         </a>
                     </div>
@@ -176,9 +142,9 @@
                 <figure class="effect-chico">
                     <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
                         <a data-toggle="modal" data-target="#ModalDivergenteVideo">
-                            <img src='<%=Page.ResolveUrl("~/img/work/Divergente.png") %>' class="img-responsive" alt="">
+                            <img src='<%=Page.ResolveUrl("~/img/team/3.jpg") %>' class="img-responsive" alt="">
                             <div class="middle">
-                                <div class="text">Divergente</div>
+                                <div class="text">Psicología</div>
                             </div>
                         </a>
                     </div>
@@ -186,9 +152,9 @@
                 <figure class="effect-chico">
                     <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
                         <a data-toggle="modal" data-target="#ModalAcomodadorVideo">
-                            <img src='<%=Page.ResolveUrl("~/img/work/Acomodador.jpeg") %>' class="img-responsive" alt="">
+                            <img src='<%=Page.ResolveUrl("~/img/team/4.jpg") %>' class="img-responsive" alt="">
                             <div class="middle">
-                                <div class="text">Acomodador</div>
+                                <div class="text">Terapia Física</div>
                             </div>
                         </a>
                     </div>

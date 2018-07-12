@@ -16,3 +16,12 @@ C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemDomain\obj\Debug\netsta
 C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfo.cs
 C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.dll
 C:\Users\rsalazar1\RandySG\gitrep\Salutem\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.pdb
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\bin\Debug\netstandard2.0\SalutemDomain.deps.json
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\bin\Debug\netstandard2.0\SalutemDomain.dll
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\bin\Debug\netstandard2.0\SalutemDomain.pdb
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.csprojResolveAssemblyReference.cache
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.csproj.CoreCompileInputs.cache
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfoInputs.cache
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfo.cs
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.dll
+C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.pdb

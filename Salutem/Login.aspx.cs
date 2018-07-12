@@ -64,7 +64,7 @@ namespace Salutem
                         Response.Redirect("~/DefaulSpecialist.aspx");
                         break;
                     case "Assistant":
-                        Response.Redirect("~/Default.aspx");
+                        Response.Redirect("~/DefaultSpecialist.aspx");
                         break;
                     case "Collaborator":
                         Response.Redirect("~/Default.aspx");
