@@ -67,7 +67,7 @@ namespace Salutem
                         Response.Redirect("~/DefaultSpecialist.aspx");
                         break;
                     case "Collaborator":
-                        Response.Redirect("~/Default.aspx");
+                        Response.Redirect("~/DefaultCollaborator.aspx");
                         break;
                     default:
                         txtMensaje.Text = "Error !! el usuario con los credenciales suministrados no esta en el sistema.";
