@@ -13,11 +13,12 @@ namespace Salutem.Views.Specialist
     public partial class CancelAppointmentSpecialist : System.Web.UI.Page
     {
         #region
-            private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
-            private AppointmentBusiness appointmentBusiness = null;
-            private Appointment appo = null;
-            private Userr user = null;
-            private string finalDate = "", operationMessage = "";
+        private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+        private AppointmentBusiness appointmentBusiness = null;
+        private Appointment appo = null;
+        private Userr user = null;
+        private static string finalDate = "";
+        private string operationMessage = "";
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -32,11 +33,9 @@ namespace Salutem.Views.Specialist
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            string date = clDate.SelectedDate.ToShortDateString();
-            string[] dateArray = date.Split(' ');
-            string[] formatDate = dateArray[0].Split('/');
+            string date = txtActualDate.Text;
 
-            finalDate = formatDate[2] + "-" + formatDate[0] + "-" + formatDate[1];
+            finalDate = date;
 
             this.appointmentBusiness = new AppointmentBusiness(this.conn);
 

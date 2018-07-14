@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Salutem.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="DefaultAssistant.aspx.cs" Inherits="Salutem.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -177,6 +177,23 @@
                     <li><a id="menuAppointmentInsert" runat="server">Agendar cita</a></li>
                     <li><a id="menuAppointmentCancel" runat="server">Cancelar cita</a></li> 
                     <li><a id="menuAppointmentUpdate" runat="server">Actualizar cita</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Reportes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ReportNumberUsersPerDay.aspx") %>'> Clientes atendidos por día</a></li>
+                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheMostvisits.aspx") %>'> Horario con mayor cantidad de visitas</a></li> 
+                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheSmallestNumberOfVisits.aspx") %>'> Horario con menor cantidad de visitas</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar receta <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/GetRecipeSpecialist.aspx") %>'> Obtener receta</a></li>
+
                 </ul>
             </li>
 

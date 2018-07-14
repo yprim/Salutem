@@ -15,12 +15,13 @@ namespace Salutem.Views.Specialist
     public partial class InsertAppointmentSpecialist : System.Web.UI.Page
     {
         #region
-            private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
-            private AppointmentBusiness appointmentBusiness = null;
-            private UserBusiness userBusiness = null;
-            private Appointment appo = null;
-            private Userr user = null;
-            private string finalDate = "", validateMessage = "", operationMessage = "";
+        private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+        private AppointmentBusiness appointmentBusiness = null;
+        private UserBusiness userBusiness = null;
+        private Appointment appo = null;
+        private Userr user = null;
+        private static string finalDate = "";
+        private string validateMessage = "", operationMessage = "";
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
