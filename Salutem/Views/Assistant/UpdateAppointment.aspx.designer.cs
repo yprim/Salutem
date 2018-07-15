@@ -22,6 +22,33 @@ namespace Salutem.Views.Assistant {
         protected global::System.Web.UI.HtmlControls.HtmlForm formBuscarCita;
         
         /// <summary>
+        /// txtIdentityCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtIdentityCard;
+        
+        /// <summary>
+        /// txtOldDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOldDate;
+        
+        /// <summary>
+        /// txtOldHour control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOldHour;
+        
+        /// <summary>
         /// lblDate control.
         /// </summary>
         /// <remarks>

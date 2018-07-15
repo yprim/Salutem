@@ -22,6 +22,24 @@ namespace Salutem.Views.User {
         protected global::System.Web.UI.HtmlControls.HtmlForm formBuscarCita;
         
         /// <summary>
+        /// lblIdentityCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIdentityCard;
+        
+        /// <summary>
+        /// txtIdentityCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtIdentityCard;
+        
+        /// <summary>
         /// lblActualDate control.
         /// </summary>
         /// <remarks>

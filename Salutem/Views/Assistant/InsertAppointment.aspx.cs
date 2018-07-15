@@ -51,7 +51,7 @@ namespace Salutem.Views.Assistant
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     case "Assistant":
                         menuAppointmentInsert.Visible = true;
@@ -64,10 +64,10 @@ namespace Salutem.Views.Assistant
                         menuAppointmentGet.Visible = true;
                         break;
                     case "Collaborator":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     default:
-                        Response.Redirect("../../UrlError.aspx");
+                        Response.Redirect("../UrlError.aspx");
                         break;
                 }
             }

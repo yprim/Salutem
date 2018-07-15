@@ -29,6 +29,11 @@ namespace Salutem.Views.Assistant
 
                 clDate.TodaysDate = Convert.ToDateTime(Request["date"]);
                 clDate.SelectedDate = clDate.TodaysDate;
+
+                txtOldDate.Text = Request["date"];
+                txtOldHour.Text = Request["hour"].ToString();
+
+                txtIdentityCard.Text = Request["identityCard"];
             }
 
             //================================================================
@@ -56,7 +61,7 @@ namespace Salutem.Views.Assistant
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     case "Assistant":
                         menuAppointmentInsert.Visible = true;
@@ -69,10 +74,10 @@ namespace Salutem.Views.Assistant
                         menuAppointmentGet.Visible = true;
                         break;
                     case "Collaborator":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     default:
-                        Response.Redirect("../../UrlError.aspx");
+                        Response.Redirect("../UrlError.aspx");
                         break;
                 }
             }
@@ -98,10 +103,10 @@ namespace Salutem.Views.Assistant
                 this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
                 this.appo = new Appointment(Convert.ToInt32(txtHour.Text), finalDate);
-                this.user = new Userr(Session["identityCard"].ToString());
+                this.user = new Userr(txtIdentityCard.Text);
 
                 //Se guarda un mensaje basado en la operación que se realizo
-                operationMessage = this.appointmentBusiness.updateAppointmentBusiness(this.appo, this.user);
+                operationMessage = this.appointmentBusiness.updateAppointmentBusiness(this.appo, this.user, txtOldDate.Text, txtOldHour.Text);
 
                 txtMensaje.Text = operationMessage;
             }

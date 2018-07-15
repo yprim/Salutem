@@ -74,7 +74,7 @@ namespace SalutemData
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public string deleteRecipeData(int id)
+        public string deleteRecipeData(Recipe recipe)
         {
             string message = "";
 
@@ -90,7 +90,9 @@ namespace SalutemData
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add(new SqlParameter("@id", id));
+                cmd.Parameters.Add(new SqlParameter("@id", recipe.id));
+                cmd.Parameters.Add(new SqlParameter("@date", recipe.date));
+                cmd.Parameters.Add(new SqlParameter("@hour", recipe.hour));
 
                 SqlDataReader reader;
                 connection.Open();
@@ -300,6 +302,58 @@ namespace SalutemData
             }
 
             return appointmentList;
+        }
+
+        /**/
+        public string validateDateData(string date, int hour)
+        {
+            string message = "";
+
+            try
+            {
+                int quantity = 0;
+
+                //establecemos la conexion
+                SqlConnection connection = new SqlConnection(this.connectionString);
+
+                String sql = "";
+
+                sql = "[sp_validateAvailabilityOfTheDateRecipe]";
+
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@date", date));
+                cmd.Parameters.Add(new SqlParameter("@hour", hour));
+
+                SqlDataReader reader;
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    quantity = Convert.ToInt32(reader["total"].ToString());
+
+                }
+
+                connection.Close();
+
+                //Valida si la fecha esta o no disponible
+                if (quantity > 0)
+                {
+                    message = "La fecha y hora solicitadas no estan disponibles";
+                }
+                else
+                {
+                    message = "Disponible";
+                }
+            }
+            catch (Exception ex)
+            {
+                message = ex.ToString();
+            }
+
+            return message;
         }
     }
 }

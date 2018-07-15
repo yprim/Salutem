@@ -115,7 +115,7 @@ namespace SalutemData
         }
 
         /**/
-        public string updateAppointmentData(Appointment appointment, Userr user)
+        public string updateAppointmentData(Appointment appointment, Userr user, string oldDate, string oldHour)
         {
             string message = "";
 
@@ -134,6 +134,8 @@ namespace SalutemData
                 cmd.Parameters.Add(new SqlParameter("@identityCard", user.identityCard));
                 cmd.Parameters.Add(new SqlParameter("@date", appointment.date));
                 cmd.Parameters.Add(new SqlParameter("@hour", appointment.hour));
+                cmd.Parameters.Add(new SqlParameter("@oldDate", oldDate));
+                cmd.Parameters.Add(new SqlParameter("@oldHour", oldHour));
 
                 SqlDataReader reader;
                 connection.Open();
@@ -276,6 +278,60 @@ namespace SalutemData
                 return appointmentList;
             }
            
+            return appointmentList;
+        }
+
+        public List<Appointment> getAllAppointmentsDataFilters(string identityCard)
+        {
+            List<Appointment> appointmentList = new List<Appointment>();
+            string finalDate = "", date = "";
+
+            try
+            {
+                //establecemos la conexion
+                SqlConnection connection = new SqlConnection(this.connectionString);
+
+                String sql = "";
+
+                sql = "[sp_getAllAppointmentsFilters]";
+
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@identityCard", identityCard));
+
+                SqlDataReader reader;
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Appointment appo = new Appointment();
+
+                    date = reader["date"].ToString();
+
+                    string[] dateArray = date.Split(' ');
+                    string[] formatDate = dateArray[0].Split('/');
+
+                    finalDate = formatDate[2] + "-" + formatDate[0] + "-" + formatDate[1];
+
+                    appo.id = Convert.ToInt32(reader["id"].ToString());
+                    appo.date = finalDate;
+                    appo.hour = Convert.ToInt32(reader["hour"].ToString());
+                    appo.status = reader["status"].ToString();
+                    appo.user = new Userr(reader["identityCard"].ToString(), reader["name"].ToString());
+
+                    appointmentList.Add(appo);
+                }
+
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+
+                return appointmentList;
+            }
+
             return appointmentList;
         }
 

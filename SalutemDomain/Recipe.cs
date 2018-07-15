@@ -26,5 +26,12 @@ namespace SalutemDomain
         {
             this.description = description;
         }
+
+        public Recipe(int id, int hour, string date)
+        {
+            this.id = id;
+            this.hour = hour;
+            this.date = date;
+        }
     }
 }

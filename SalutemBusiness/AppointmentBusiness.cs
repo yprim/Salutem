@@ -36,11 +36,11 @@ namespace SalutemBusiness
             return message;
         }
 
-        public string updateAppointmentBusiness(Appointment appointment, Userr user)
+        public string updateAppointmentBusiness(Appointment appointment, Userr user, string oldDate, string oldHour)
         {
             string message = "";
 
-            message = appointmentData.updateAppointmentData(appointment, user);
+            message = appointmentData.updateAppointmentData(appointment, user, oldDate, oldHour);
 
             return message;
         }
@@ -66,6 +66,13 @@ namespace SalutemBusiness
         public List<Appointment> getAllAppointmentsBusiness()
         {
             List<Appointment> appointmentsList = appointmentData.getAllAppointmentsData();
+
+            return appointmentsList;
+        }
+
+        public List<Appointment> getAllAppointmentsBusinessFilters(string identityCard)
+        {
+            List<Appointment> appointmentsList = appointmentData.getAllAppointmentsDataFilters(identityCard);
 
             return appointmentsList;
         }

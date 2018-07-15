@@ -33,7 +33,7 @@ namespace Salutem
                 }
                 switch (Session["rol"]) {
                     case "Specialist":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("./Views/CredentialsError.aspx");
                         break;
                     case "Assistant":
                         menuAppointmentInsert.Visible = true;
@@ -46,10 +46,10 @@ namespace Salutem
                         menuAppointmentGet.Visible = true;
                         break;
                     case "Collaborator":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("./Views/CredentialsError.aspx");
                         break;
                     default:
-                        Response.Redirect("../../UrlError.aspx");
+                        Response.Redirect("./Views/UrlError.aspx");
                         break;
                 }
             } catch {

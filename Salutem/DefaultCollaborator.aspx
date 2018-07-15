@@ -183,6 +183,8 @@
 
             <li><a href="#credits">Créditos</a></li>
 
+            <li><a href="./LogOut.aspx">LogOut</a></li>
+
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar...">
                 <span class="input-group-btn">
@@ -195,5 +197,5 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaulSpecialist.aspx") %>'>Salutem</a>
+    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaultCollaborator.aspx") %>'>Salutem</a>
 </asp:Content>

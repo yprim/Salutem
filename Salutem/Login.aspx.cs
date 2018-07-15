@@ -25,10 +25,10 @@ namespace Salutem
             }
 
             //Se valída el intento de acceso por url a un elemento no permitido
-            if (Request["error"] == "True")
-            {
+            //if (Request["error"] == "True")
+            //{
 
-            }
+            //}
 
         }
 

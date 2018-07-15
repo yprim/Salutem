@@ -79,22 +79,22 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar cita <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx") %>'> Agendar cita</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialistCancel.aspx") %>'> Cancelar cita</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialistUpdate.aspx") %>'> Actualizar cita</a></li>
+                    <li><a id="menuAppointmentInsert" runat="server"> Agendar cita</a></li>
+                    <li><a id="menuAppointmentCancel" runat="server"> Cancelar cita</a></li> 
+                    <li><a id="menuAppointmentUpdate" runat="server"> Actualizar cita</a></li>
+                    <li><a id="menuAppointmentGet" runat="server"> Obtener cita</a></li>
                 </ul>
             </li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar receta <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/InsertRecipeSpecialist.aspx") %>'> Generar receta</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/SearchRecipeSpecialist.aspx") %>'> Cancela receta</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/SearchRecipeSpecialist.aspx") %>'> Actualizar receta</a></li>
+                    <li><a id="menuAppointmentInsertRecipe" runat="server"> Generar receta</a></li>
+                    <li><a id="menuAppointmentCancelRecipe" runat="server"> Cancela receta</a></li> 
+                    <li><a id="menuAppointmentUpdateRecipe" runat="server"> Actualizar receta</a></li>
+                    <li><a id="menuAppointmentGetRecipe" runat="server"> Obtener receta</a></li>
                 </ul>
             </li>
-
-            <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/SearchRecipeSpecialist.aspx") %>'>Obtener receta</a></li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar diagnóstico <b class="caret"></b></a>
@@ -102,10 +102,9 @@
                     <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/InsertDiagnosis.aspx") %>'> Generar diagnóstico</a></li>
                     <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.apsx") %>'> Eliminar diagnóstico</a></li> 
                     <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'> Actualizar diagnóstico</a></li>
+                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'>Obtener diagnóstico</a></li>
                 </ul>
             </li>
-
-            <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'>Obtener diagnóstico</a></li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Reportes <b class="caret"></b></a>
@@ -115,6 +114,17 @@
                     <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheSmallestNumberOfVisits.aspx") %>'> Horario con menor cantidad de visitas</a></li>
                 </ul>
             </li>
+
+            <li><a href="#credits">Créditos</a></li>
+
+            <li><a href="../../../LogOut.aspx">LogOut</a></li>
+
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar...">
+                <span class="input-group-btn">
+                    <button class="btn btn-info" type="button">Buscar</button>
+                </span>
+            </div><!-- /input-group -->
         </ul>
     </div>
 </asp:Content>

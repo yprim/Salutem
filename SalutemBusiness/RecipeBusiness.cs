@@ -42,11 +42,11 @@ namespace SalutemBusiness
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public string deleteRecipeBusiness(int id)
+        public string deleteRecipeBusiness(Recipe recipe)
         {
             string message = "";
 
-            message = recipeData.deleteRecipeData(id);
+            message = recipeData.deleteRecipeData(recipe);
 
             return message;
         }
@@ -98,6 +98,15 @@ namespace SalutemBusiness
             List<Recipe> recipesList = recipeData.getRecipesDataByIdentityCardData(identityCard);
 
             return recipesList;
+        }
+
+        public string validateDateBusiness(string date, int hour)
+        {
+            string message = "";
+
+            message = recipeData.validateDateData(date, hour);
+
+            return message;
         }
     }
 }

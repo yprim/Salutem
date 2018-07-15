@@ -27,6 +27,7 @@ namespace Salutem.Views.User
             {
                 txtActualDate.Text = Request["date"];
                 txtActualHour.Text = Request["hour"];
+                txtIdentityCard.Text = Request["identityCard"]; 
             }
 
             //================================================================
@@ -50,14 +51,10 @@ namespace Salutem.Views.User
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = true;
-                        menuAppointmentUpdate.Visible = true;
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     case "Assistant":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     case "Collaborator":
                         menuAppointmentInsert.Visible = true;
@@ -65,7 +62,7 @@ namespace Salutem.Views.User
                         menuAppointmentUpdate.Visible = true;
                         break;
                     default:
-                        Response.Redirect("../../UrlError.aspx");
+                        Response.Redirect("../UrlError.aspx");
                         break;
                 }
             }
@@ -82,7 +79,7 @@ namespace Salutem.Views.User
             this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
             this.appo = new Appointment(Convert.ToInt32(txtActualHour.Text), finalDate);
-            this.user = new Userr(Request["identityCard"].ToString());
+            this.user = new Userr(txtIdentityCard.Text);
 
             //Se guarda un mensaje basado en la operación que se realizo
             operationMessage = this.appointmentBusiness.cancelAppointmentWithoutAppointmentIdBusiness(this.appo, this.user);

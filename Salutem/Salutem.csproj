@@ -153,6 +153,7 @@
     <Content Include="js\parallax.min.js" />
     <Content Include="js\wow.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="LogOut.aspx" />
     <Content Include="SalutemService.asmx" />
     <Content Include="Views\Assistant\CancelAppointment.aspx" />
     <Content Include="Views\Assistant\SearchRecipesGeneral.aspx" />
@@ -165,6 +166,7 @@
     <Content Include="Views\Assistant\UpdateAppointment.aspx" />
     <Content Include="Views\Assistant\SearchAppointmentGeneral.aspx" />
     <Content Include="Views\Collaborator\SearchAppointmentUpdate.aspx" />
+    <Content Include="Views\CredentialsError.aspx" />
     <Content Include="Views\Specialist\Appointment\CancelAppointmentSpecialist.aspx" />
     <Content Include="Views\Specialist\Appointment\InsertAppointmentSpecialist.aspx" />
     <Content Include="Views\Specialist\Appointment\SearchAppointmentSpecialistCancel.aspx" />
@@ -177,7 +179,9 @@
     <Content Include="Views\Specialist\Recipe\InsertRecipeSpecialist.aspx" />
     <Content Include="Views\Specialist\Appointment\SearchAppointmentSpecialistUpdate.aspx" />
     <Content Include="Views\Specialist\Appointment\UpdateAppointmentSpecialist.aspx" />
-    <Content Include="Views\Specialist\Recipe\SearchRecipeSpecialist.aspx" />
+    <Content Include="Views\Specialist\Recipe\SearchRecipeSpecialistCancel.aspx" />
+    <Content Include="Views\Specialist\Recipe\SearchRecipeSpecialistGeneral.aspx" />
+    <Content Include="Views\Specialist\Recipe\SearchRecipeSpecialistUpdate.aspx" />
     <Content Include="Views\Specialist\Recipe\UpdateRecipeSpecialist.aspx" />
     <Content Include="Views\Specialist\Reports\ReportNumberUsersPerDay.aspx" />
     <Content Include="Views\Specialist\Reports\ScheduleReportWithTheMostvisits.aspx" />
@@ -217,6 +221,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Salutem.Master.cs">
@@ -307,6 +318,13 @@
     <Compile Include="Views\Collaborator\SearchAppointmentUpdate.aspx.designer.cs">
       <DependentUpon>SearchAppointmentUpdate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\CredentialsError.aspx.cs">
+      <DependentUpon>CredentialsError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CredentialsError.aspx.designer.cs">
+      <DependentUpon>CredentialsError.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Specialist\Appointment\CancelAppointmentSpecialist.aspx.cs">
       <DependentUpon>CancelAppointmentSpecialist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -391,12 +409,26 @@
     <Compile Include="Views\Specialist\Appointment\UpdateAppointmentSpecialist.aspx.designer.cs">
       <DependentUpon>UpdateAppointmentSpecialist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialist.aspx.cs">
-      <DependentUpon>SearchRecipeSpecialist.aspx</DependentUpon>
+    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialistCancel.aspx.cs">
+      <DependentUpon>SearchRecipeSpecialistCancel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialist.aspx.designer.cs">
-      <DependentUpon>SearchRecipeSpecialist.aspx</DependentUpon>
+    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialistCancel.aspx.designer.cs">
+      <DependentUpon>SearchRecipeSpecialistCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialistGeneral.aspx.cs">
+      <DependentUpon>SearchRecipeSpecialistGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialistGeneral.aspx.designer.cs">
+      <DependentUpon>SearchRecipeSpecialistGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialistUpdate.aspx.cs">
+      <DependentUpon>SearchRecipeSpecialistUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Specialist\Recipe\SearchRecipeSpecialistUpdate.aspx.designer.cs">
+      <DependentUpon>SearchRecipeSpecialistUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Specialist\Recipe\UpdateRecipeSpecialist.aspx.cs">
       <DependentUpon>UpdateRecipeSpecialist.aspx</DependentUpon>

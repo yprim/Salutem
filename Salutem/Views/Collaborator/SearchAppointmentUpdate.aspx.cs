@@ -32,14 +32,10 @@ namespace Salutem.Views.Collaborator
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = true;
-                        menuAppointmentUpdate.Visible = true;
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     case "Assistant":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     case "Collaborator":
                         menuAppointmentInsert.Visible = true;
@@ -47,7 +43,7 @@ namespace Salutem.Views.Collaborator
                         menuAppointmentUpdate.Visible = true;
                         break;
                     default:
-                        Response.Redirect("../../UrlError.aspx");
+                        Response.Redirect("../UrlError.aspx");
                         break;
                 }
             }

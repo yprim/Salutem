@@ -21,6 +21,12 @@
                 <form id="formBuscarCita" runat="server">
 
                     <div class="form-group">
+                        <asp:TextBox ID="txtIdentityCard" ReadOnly="true" runat="server" CssClass="form-control" placeholder="Número de cédula"></asp:TextBox>
+                    </div>
+                    <asp:TextBox ID="txtOldDate" type="hidden" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtOldHour" type="hidden" runat="server"></asp:TextBox>
+
+                    <div class="form-group">
                         <asp:Label ID="lblDate" runat="server" Text="Nueva fecha"></asp:Label>
                         <asp:Calendar ID="clDate" runat="server"></asp:Calendar>
                     </div>
@@ -74,6 +80,8 @@
             </li>
 
             <li><a href="#credits">Créditos</a></li>
+
+            <li><a href="../../LogOut.aspx">LogOut</a></li>
 
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar...">

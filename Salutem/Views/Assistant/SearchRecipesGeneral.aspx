@@ -63,9 +63,9 @@
                     "<th scope='col'>Número de registro</th>" +
                     "<th scope='col'>Nombre del cliente</th>" +
                     "<th scope='col'>Número de cédula</th>" +
-                    "<th scope='col'>Fecha de la cita</th>" +
-                    "<th scope='col'>Hora de la cita</th>" +
-                    "<th scope='col'>Estado de la cita</th>" +
+                    "<th scope='col'>Fecha de emisión de la receta</th>" +
+                    "<th scope='col'>Hora de emisión de la receta</th>" +
+                    "<th scope='col'>Estado de la receta</th>" +
                     "</tr>" +
                     "</thead>" +
                     "<tbody>";
@@ -132,9 +132,9 @@
                         "<th scope='col'>Número de registro</th>" +
                         "<th scope='col'>Nombre del cliente</th>" +
                         "<th scope='col'>Número de cédula</th>" +
-                        "<th scope='col'>Fecha de la cita</th>" +
-                        "<th scope='col'>Hora de la cita</th>" +
-                        "<th scope='col'>Estado de la cita</th>" +
+                        "<th scope='col'>Fecha de emisión de la receta</th>" +
+                        "<th scope='col'>Hora de emisión de la receta</th>" +
+                        "<th scope='col'>Estado de la receta</th>" +
                         "</tr>" +
                         "</thead>" +
                         "<tbody>";
@@ -209,6 +209,8 @@
             </li>
 
             <li><a href="#credits">Créditos</a></li>
+
+            <li><a href="../../LogOut.aspx">LogOut</a></li>
 
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar...">

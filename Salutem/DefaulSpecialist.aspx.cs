@@ -14,16 +14,25 @@ namespace Salutem
             //================================================================
             //Navigation
             //================================================================
+            //Cita
             menuAppointmentInsert.HRef = "~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx";
             menuAppointmentCancel.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistCancel.aspx";
             menuAppointmentUpdate.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistUpdate.aspx";
             menuAppointmentGet.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistGeneral.aspx";
+
+            //Receta
+            menuAppointmentInsertRecipe.HRef = "~/Views/Specialist/Recipe/InsertRecipeSpecialist.aspx";
+            menuAppointmentCancelRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistCancel.aspx";
+            menuAppointmentUpdateRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistUpdate.aspx";
+            menuAppointmentGetRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistGeneral.aspx";
+
             //================================================================
 
             //================================================================
             //Roles
             //================================================================
-            try {
+            try
+            {
                 if (string.IsNullOrEmpty((string)Session["rol"])) {
                     Session["rol"] = "NoRolSet";
                 }
@@ -32,15 +41,20 @@ namespace Salutem
                         menuAppointmentInsert.Visible = true;
                         menuAppointmentCancel.Visible = true;
                         menuAppointmentUpdate.Visible = true;
+                        menuAppointmentGet.Visible = true;
+                        menuAppointmentInsertRecipe.Visible = true;
+                        menuAppointmentCancelRecipe.Visible = true;
+                        menuAppointmentUpdateRecipe.Visible = true;
+                        menuAppointmentGetRecipe.Visible = true;
                         break;
                     case "Assistant":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("./Views/CredentialsError.aspx");
                         break;
                     case "Collaborator":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("./Views/CredentialsError.aspx");
                         break;
                     default:
-                        //Error
+                        Response.Redirect("./Views/UrlError.aspx");
                         break;
                 }
             } catch {

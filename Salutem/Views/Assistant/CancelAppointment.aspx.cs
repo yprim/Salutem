@@ -15,11 +15,10 @@ namespace Salutem.Views.Assistant
         #region
         private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         private AppointmentBusiness appointmentBusiness = null;
-        private UserBusiness userBusiness = null;
         private SalutemDomain.Appointment appo = null;
         private Userr user = null;
         private static string finalDate = "";
-        private string validateMessage = "", operationMessage = "";
+        private string operationMessage = "";
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -28,6 +27,7 @@ namespace Salutem.Views.Assistant
             {
                 txtActualDate.Text = Request["date"];
                 txtHour.Text = Request["hour"];
+                txtIdentityCard.Text = Request["identityCard"];
             }
 
             //================================================================
@@ -55,7 +55,7 @@ namespace Salutem.Views.Assistant
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     case "Assistant":
                         menuAppointmentInsert.Visible = true;
@@ -68,10 +68,10 @@ namespace Salutem.Views.Assistant
                         menuAppointmentGet.Visible = true;
                         break;
                     case "Collaborator":
-                        //No tiene los credenciales requeridos
+                        Response.Redirect("../CredentialsError.aspx");
                         break;
                     default:
-                        Response.Redirect("../../UrlError.aspx");
+                        Response.Redirect("../UrlError.aspx");
                         break;
                 }
             }
@@ -88,7 +88,7 @@ namespace Salutem.Views.Assistant
             this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
             this.appo = new Appointment(Convert.ToInt32(txtHour.Text), finalDate);
-            this.user = new Userr(Request["identityCard"].ToString());
+            this.user = new Userr(txtIdentityCard.Text);
 
             //Se guarda un mensaje basado en la operación que se realizo
             operationMessage = this.appointmentBusiness.cancelAppointmentWithoutAppointmentIdBusiness(this.appo, this.user);

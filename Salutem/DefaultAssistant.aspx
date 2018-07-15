@@ -196,12 +196,15 @@
 
             <li><a href="#credits">Créditos</a></li>
 
+            <li><a href="./LogOut.aspx">LogOut</a></li>
+
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar...">
                 <span class="input-group-btn">
                     <button class="btn btn-info" type="button">Buscar</button>
                 </span>
             </div><!-- /input-group -->
+
         </ul>
     </div>
 </asp:Content>

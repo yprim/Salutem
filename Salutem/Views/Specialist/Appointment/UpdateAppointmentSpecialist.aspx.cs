@@ -30,7 +30,64 @@ namespace Salutem.Views.Specialist
 
                 clRecipeDate.TodaysDate = Convert.ToDateTime(Request["date"]);
                 clRecipeDate.SelectedDate = clRecipeDate.TodaysDate;
+
+                txtOldDate.Text = Request["date"];
+                txtOldHour.Text = Request["hour"].ToString();
             }
+
+            //================================================================
+            //Navigation
+            //================================================================
+            //Cita
+            menuAppointmentInsert.HRef = "~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx";
+            menuAppointmentCancel.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistCancel.aspx";
+            menuAppointmentUpdate.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistUpdate.aspx";
+            menuAppointmentGet.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistGeneral.aspx";
+
+            //Receta
+            menuAppointmentInsertRecipe.HRef = "~/Views/Specialist/Recipe/InsertRecipeSpecialist.aspx";
+            menuAppointmentCancelRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistCancel.aspx";
+            menuAppointmentUpdateRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistUpdate.aspx";
+            menuAppointmentGetRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistGeneral.aspx";
+
+            //================================================================
+
+            //================================================================
+            //Roles
+            //================================================================
+            try
+            {
+                if (string.IsNullOrEmpty((string)Session["rol"]))
+                {
+                    Session["rol"] = "NoRolSet";
+                }
+                switch (Session["rol"])
+                {
+                    case "Specialist":
+                        menuAppointmentInsert.Visible = true;
+                        menuAppointmentCancel.Visible = true;
+                        menuAppointmentUpdate.Visible = true;
+                        menuAppointmentGet.Visible = true;
+                        menuAppointmentInsertRecipe.Visible = true;
+                        menuAppointmentCancelRecipe.Visible = true;
+                        menuAppointmentUpdateRecipe.Visible = true;
+                        menuAppointmentGetRecipe.Visible = true;
+                        break;
+                    case "Assistant":
+                        Response.Redirect("../../CredentialsError.aspx");
+                        break;
+                    case "Collaborator":
+                        Response.Redirect("../../CredentialsError.aspx");
+                        break;
+                    default:
+                        Response.Redirect("../../UrlError.aspx");
+                        break;
+                }
+            }
+            catch
+            {
+            }
+            //================================================================
         }
 
         protected void btnActualizar_Click(object sender, EventArgs e)
@@ -52,7 +109,7 @@ namespace Salutem.Views.Specialist
                 this.user = new Userr(txtIdentityCard.Text);
 
                 //Se guarda un mensaje basado en la operación que se realizo
-                operationMessage = this.appointmentBusiness.updateAppointmentBusiness(this.appo, this.user);
+                operationMessage = this.appointmentBusiness.updateAppointmentBusiness(this.appo, this.user, txtOldDate.Text, txtOldHour.Text);
 
                 txtMensaje.Text = operationMessage;
             }
