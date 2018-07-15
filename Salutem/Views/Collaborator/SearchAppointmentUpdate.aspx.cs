@@ -5,28 +5,31 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Salutem
+namespace Salutem.Views.Collaborator
 {
-    public partial class DefaulAdmin : System.Web.UI.Page
+    public partial class SearchAppointmentUpdate : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             //================================================================
             //Navigation
             //================================================================
-            menuAppointmentInsert.HRef = "~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx";
-            menuAppointmentCancel.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistCancel.aspx";
-            menuAppointmentUpdate.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistUpdate.aspx";
+            menuAppointmentInsert.HRef = "~/Views/Collaborator/InsertAppointment.aspx";
+            menuAppointmentCancel.HRef = "~/Views/Collaborator/SearchAppointmentCancel.aspx";
+            menuAppointmentUpdate.HRef = "~/Views/Collaborator/SearchAppointmentUpdate.aspx";
             //================================================================
 
             //================================================================
             //Roles
             //================================================================
-            try {
-                if (string.IsNullOrEmpty((string)Session["rol"])) {
+            try
+            {
+                if (string.IsNullOrEmpty((string)Session["rol"]))
+                {
                     Session["rol"] = "NoRolSet";
                 }
-                switch (Session["rol"]) {
+                switch (Session["rol"])
+                {
                     case "Specialist":
                         menuAppointmentInsert.Visible = true;
                         menuAppointmentCancel.Visible = true;
@@ -39,13 +42,16 @@ namespace Salutem
                         break;
                     case "Collaborator":
                         menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
+                        menuAppointmentCancel.Visible = true;
+                        menuAppointmentUpdate.Visible = true;
                         break;
                     default:
+                        Response.Redirect("../../UrlError.aspx");
                         break;
                 }
-            } catch {
+            }
+            catch
+            {
             }
             //================================================================
         }

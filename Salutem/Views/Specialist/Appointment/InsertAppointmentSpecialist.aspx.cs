@@ -18,7 +18,7 @@ namespace Salutem.Views.Specialist
         private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         private AppointmentBusiness appointmentBusiness = null;
         private UserBusiness userBusiness = null;
-        private Appointment appo = null;
+        private SalutemDomain.Appointment appo = null;
         private Userr user = null;
         private static string finalDate = "";
         private string validateMessage = "", operationMessage = "";
@@ -44,7 +44,7 @@ namespace Salutem.Views.Specialist
             {
                 this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
-                this.appo = new Appointment(Convert.ToInt32(txtHour.Text), finalDate);
+                this.appo = new SalutemDomain.Appointment(Convert.ToInt32(txtHour.Text), finalDate);
                 //this.user = new Userr(txtNumCedula.Text);
                 //RSG
                 this.userBusiness = new UserBusiness(this.conn);
@@ -83,7 +83,7 @@ namespace Salutem.Views.Specialist
         {
             this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
-            this.appo = new Appointment(Convert.ToInt32(txtId.Text), Convert.ToInt32(txtHour.Text), finalDate);
+            this.appo = new SalutemDomain.Appointment(Convert.ToInt32(txtId.Text), Convert.ToInt32(txtHour.Text), finalDate);
             this.user = new Userr(txtNumCedula.Text);
 
             //Se guarda un mensaje basado en la operación que se realizo
@@ -92,8 +92,6 @@ namespace Salutem.Views.Specialist
             //Se valida que la operación sea exitosa
             if (operationMessage != "Error al ejecutar la operación en la base de datos")
             {
-                txtId.Text = operationMessage;
-
                 txtMensaje.Text = "La operación se realizo satisfactoriamente";
             }
             else

@@ -23,6 +23,13 @@ namespace Salutem
             {
                 txtMensaje.Visible = false;
             }
+
+            //Se valída el intento de acceso por url a un elemento no permitido
+            if (Request["error"] == "True")
+            {
+
+            }
+
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

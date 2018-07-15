@@ -81,7 +81,8 @@
     <Content Include="css\pageloader.gif" />
     <Content Include="css\style.css" />
     <Content Include="DefaulSpecialist.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="DefaultAssistant.aspx" />
+    <Content Include="DefaultCollaborator.aspx" />
     <Content Include="font-awesome\css\font-awesome.min.css" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="fonts.css" />
@@ -153,25 +154,28 @@
     <Content Include="js\wow.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="SalutemService.asmx" />
+    <Content Include="Views\Collaborator\SearchAppointmentUpdate.aspx" />
     <Content Include="Views\Specialist\Appointment\CancelAppointmentSpecialist.aspx" />
     <Content Include="Views\Specialist\Appointment\InsertAppointmentSpecialist.aspx" />
+    <Content Include="Views\Specialist\Appointment\SearchAppointmentSpecialistCancel.aspx" />
     <Content Include="Views\Specialist\Diagnosis\DeleteDiagnosis.aspx" />
     <Content Include="Views\Specialist\Diagnosis\InsertDiagnosis.aspx" />
     <Content Include="Views\Specialist\Diagnosis\SearchDiagnosis.aspx" />
     <Content Include="Views\Specialist\Diagnosis\UpdateDiagnosis.aspx" />
     <Content Include="Views\Specialist\Recipe\DeleteRecipeSpecialist.aspx" />
     <Content Include="Views\Specialist\Recipe\InsertRecipeSpecialist.aspx" />
-    <Content Include="Views\Specialist\Appointment\SearchAppointmentSpecialist.aspx" />
+    <Content Include="Views\Specialist\Appointment\SearchAppointmentSpecialistUpdate.aspx" />
     <Content Include="Views\Specialist\Appointment\UpdateAppointmentSpecialist.aspx" />
     <Content Include="Views\Specialist\Recipe\SearchRecipeSpecialist.aspx" />
     <Content Include="Views\Specialist\Recipe\UpdateRecipeSpecialist.aspx" />
     <Content Include="Views\Specialist\Reports\ReportNumberUsersPerDay.aspx" />
     <Content Include="Views\Specialist\Reports\ScheduleReportWithTheMostvisits.aspx" />
     <Content Include="Views\Specialist\Reports\ScheduleReportWithTheSmallestNumberOfVisits.aspx" />
-    <Content Include="Views\User\CancelAppointment.aspx" />
-    <Content Include="Views\User\InsertAppointment.aspx" />
-    <Content Include="Views\User\SearchAppointment.aspx" />
-    <Content Include="Views\User\UpdateAppointment.aspx" />
+    <Content Include="Views\UrlError.aspx" />
+    <Content Include="Views\Collaborator\CancelAppointment.aspx" />
+    <Content Include="Views\Collaborator\InsertAppointment.aspx" />
+    <Content Include="Views\Collaborator\SearchAppointmentCancel.aspx" />
+    <Content Include="Views\Collaborator\UpdateAppointment.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -182,12 +186,19 @@
     <Compile Include="DefaulSpecialist.aspx.designer.cs">
       <DependentUpon>DefaulSpecialist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="DefaultAssistant.aspx.cs">
+      <DependentUpon>DefaultAssistant.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="DefaultAssistant.aspx.designer.cs">
+      <DependentUpon>DefaultAssistant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultCollaborator.aspx.cs">
+      <DependentUpon>DefaultCollaborator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultCollaborator.aspx.designer.cs">
+      <DependentUpon>DefaultCollaborator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -208,6 +219,13 @@
       <DependentUpon>SalutemService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\Collaborator\SearchAppointmentUpdate.aspx.cs">
+      <DependentUpon>SearchAppointmentUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Collaborator\SearchAppointmentUpdate.aspx.designer.cs">
+      <DependentUpon>SearchAppointmentUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Specialist\Appointment\CancelAppointmentSpecialist.aspx.cs">
       <DependentUpon>CancelAppointmentSpecialist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,6 +239,13 @@
     </Compile>
     <Compile Include="Views\Specialist\Appointment\InsertAppointmentSpecialist.aspx.designer.cs">
       <DependentUpon>InsertAppointmentSpecialist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specialist\Appointment\SearchAppointmentSpecialistCancel.aspx.cs">
+      <DependentUpon>SearchAppointmentSpecialistCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Specialist\Appointment\SearchAppointmentSpecialistCancel.aspx.designer.cs">
+      <DependentUpon>SearchAppointmentSpecialistCancel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Specialist\Diagnosis\DeleteDiagnosis.aspx.cs">
       <DependentUpon>DeleteDiagnosis.aspx</DependentUpon>
@@ -264,12 +289,12 @@
     <Compile Include="Views\Specialist\Recipe\InsertRecipeSpecialist.aspx.designer.cs">
       <DependentUpon>InsertRecipeSpecialist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Specialist\Appointment\SearchAppointmentSpecialist.aspx.cs">
-      <DependentUpon>SearchAppointmentSpecialist.aspx</DependentUpon>
+    <Compile Include="Views\Specialist\Appointment\SearchAppointmentSpecialistUpdate.aspx.cs">
+      <DependentUpon>SearchAppointmentSpecialistUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Specialist\Appointment\SearchAppointmentSpecialist.aspx.designer.cs">
-      <DependentUpon>SearchAppointmentSpecialist.aspx</DependentUpon>
+    <Compile Include="Views\Specialist\Appointment\SearchAppointmentSpecialistUpdate.aspx.designer.cs">
+      <DependentUpon>SearchAppointmentSpecialistUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Specialist\Appointment\UpdateAppointmentSpecialist.aspx.cs">
       <DependentUpon>UpdateAppointmentSpecialist.aspx</DependentUpon>
@@ -313,32 +338,39 @@
     <Compile Include="Views\Specialist\Reports\ScheduleReportWithTheSmallestNumberOfVisits.aspx.designer.cs">
       <DependentUpon>ScheduleReportWithTheSmallestNumberOfVisits.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\User\CancelAppointment.aspx.cs">
+    <Compile Include="Views\UrlError.aspx.cs">
+      <DependentUpon>UrlError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UrlError.aspx.designer.cs">
+      <DependentUpon>UrlError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Collaborator\CancelAppointment.aspx.cs">
       <DependentUpon>CancelAppointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\User\CancelAppointment.aspx.designer.cs">
+    <Compile Include="Views\Collaborator\CancelAppointment.aspx.designer.cs">
       <DependentUpon>CancelAppointment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\User\InsertAppointment.aspx.cs">
+    <Compile Include="Views\Collaborator\InsertAppointment.aspx.cs">
       <DependentUpon>InsertAppointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\User\InsertAppointment.aspx.designer.cs">
+    <Compile Include="Views\Collaborator\InsertAppointment.aspx.designer.cs">
       <DependentUpon>InsertAppointment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\User\SearchAppointment.aspx.cs">
-      <DependentUpon>SearchAppointment.aspx</DependentUpon>
+    <Compile Include="Views\Collaborator\SearchAppointmentCancel.aspx.cs">
+      <DependentUpon>SearchAppointmentCancel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\User\SearchAppointment.aspx.designer.cs">
-      <DependentUpon>SearchAppointment.aspx</DependentUpon>
+    <Compile Include="Views\Collaborator\SearchAppointmentCancel.aspx.designer.cs">
+      <DependentUpon>SearchAppointmentCancel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\User\UpdateAppointment.aspx.cs">
+    <Compile Include="Views\Collaborator\UpdateAppointment.aspx.cs">
       <DependentUpon>UpdateAppointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\User\UpdateAppointment.aspx.designer.cs">
+    <Compile Include="Views\Collaborator\UpdateAppointment.aspx.designer.cs">
       <DependentUpon>UpdateAppointment.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

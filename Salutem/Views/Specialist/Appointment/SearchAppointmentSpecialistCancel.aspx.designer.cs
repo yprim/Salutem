@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Salutem.Views.User {
+namespace Salutem.Views.Specialist.Appointment {
     
     
-    public partial class SearchAppointment {
+    public partial class SearchAppointmentSpecialistCancel {
         
         /// <summary>
         /// formBuscarCita control.

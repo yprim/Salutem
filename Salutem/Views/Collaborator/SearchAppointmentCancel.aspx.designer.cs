@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Salutem {
+namespace Salutem.Views.User {
     
     
-    public partial class DefaultCollaborator {
+    public partial class SearchAppointment {
+        
+        /// <summary>
+        /// formBuscarCita control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm formBuscarCita;
         
         /// <summary>
         /// menuAppointmentInsert control.

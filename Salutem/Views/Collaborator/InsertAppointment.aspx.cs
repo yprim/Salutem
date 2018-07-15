@@ -12,14 +12,24 @@ namespace Salutem.Views.User
 {
     public partial class InsertAppointment : System.Web.UI.Page
     {
+        #region
+        private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+        private AppointmentBusiness appointmentBusiness = null;
+        private UserBusiness userBusiness = null;
+        private SalutemDomain.Appointment appo = null;
+        private Userr user = null;
+        private static string finalDate = "";
+        private string validateMessage = "", operationMessage = "";
+        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //================================================================
             //Navigation
             //================================================================
-            menuAppointmentInsert.HRef = "~/Views/User/InsertAppointment.aspx";
-            menuAppointmentCancel.HRef = "~/Views/User/SearchAppointment.aspx";
-            menuAppointmentUpdate.HRef = "~/Views/User/SearchAppointment.aspx";
+            menuAppointmentInsert.HRef = "~/Views/Collaborator/InsertAppointment.aspx";
+            menuAppointmentCancel.HRef = "~/Views/Collaborator/SearchAppointmentCancel.aspx";
+            menuAppointmentUpdate.HRef = "~/Views/Collaborator/SearchAppointmentUpdate.aspx";
             //================================================================
 
             //================================================================
@@ -42,25 +52,17 @@ namespace Salutem.Views.User
                         break;
                     case "Collaborator":
                         menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
+                        menuAppointmentCancel.Visible = true;
+                        menuAppointmentUpdate.Visible = true;
                         break;
                     default:
+                        Response.Redirect("../../UrlError.aspx");
                         break;
                 }
             } catch {
             }
             //================================================================
         }
-
-        #region
-        private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
-        private AppointmentBusiness appointmentBusiness = null;
-        private UserBusiness userBusiness = null;
-        private Appointment appo = null;
-        private Userr user = null;
-        private string finalDate = "", validateMessage = "", operationMessage = "";
-        #endregion
 
         protected void btnAgendar_Click(object sender, EventArgs e) {
             string date = clFechaCita.SelectedDate.ToShortDateString();
@@ -79,13 +81,14 @@ namespace Salutem.Views.User
                 //this.user = new Userr(txtNumCedula.Text);
                 //RSG
                 this.userBusiness = new UserBusiness(this.conn);
-                this.user = this.userBusiness.getUserData(txtNumCedula.Text);
+                this.user = this.userBusiness.getUserData(Session["identityCard"].ToString());
+
                 if (this.user.errorMessage != null && this.user.errorMessage != "") {
                     //txtMensaje.Text = this.user.errorMessage;
                     return;
                 }
                 if (this.user.name == null || this.user.name == "") {
-                    //txtMensaje.Text = "El cliente no existe en la base de datos.";
+                    txtMensaje.Text = "El cliente no existe en la base de datos.";
                     return;
                 }
 
@@ -94,30 +97,36 @@ namespace Salutem.Views.User
 
                 //Se valida que la operación sea exitosa
                 if (operationMessage != "Error al ejecutar la operación en la base de datos") {
-                    //txtId.Text = operationMessage;
+                    txtId.Text = operationMessage;
 
-                    //txtMensaje.Text = "La operación se realizó satisfactoriamente";
+                    txtMensaje.Text = "La operación se realizó satisfactoriamente";
                 } else {
-                    //txtMensaje.Text = operationMessage;
+                    txtMensaje.Text = operationMessage;
                 }
             } else {
-                //txtMensaje.Text = validateMessage;
+                txtMensaje.Text = validateMessage;
             }
-
-            //Clear fields when appointment was succesfully saved.
-            txtNumCedula.Text = String.Empty;
-            txtNombreCliente.Text = String.Empty;
-            txtHour.Text = String.Empty;
-        }
-
-        protected void btnActualizar_Click(object sender, EventArgs e)
-        {
-
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
+            this.appo = new SalutemDomain.Appointment(Convert.ToInt32(txtId.Text), Convert.ToInt32(txtHour.Text), finalDate);
+            this.user = new Userr(Session["identityCard"].ToString());
+
+            //Se guarda un mensaje basado en la operación que se realizo
+            operationMessage = this.appointmentBusiness.cancelAppointmentBusiness(this.appo);
+
+            //Se valida que la operación sea exitosa
+            if (operationMessage != "Error al ejecutar la operación en la base de datos")
+            {
+                txtMensaje.Text = "La operación se realizo satisfactoriamente";
+            }
+            else
+            {
+                txtMensaje.Text = operationMessage;
+            }
         }
 
         private string validateDate(string date, int hour) {

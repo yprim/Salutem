@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Salutem {
+namespace Salutem.Views {
     
     
-    public partial class DefaultCollaborator {
+    public partial class Urlerror {
         
         /// <summary>
-        /// menuAppointmentInsert control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentInsert;
+        protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// menuAppointmentCancel control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentCancel;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// menuAppointmentUpdate control.
+        /// btnGotoLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentUpdate;
+        protected global::System.Web.UI.WebControls.Button btnGotoLogin;
     }
 }

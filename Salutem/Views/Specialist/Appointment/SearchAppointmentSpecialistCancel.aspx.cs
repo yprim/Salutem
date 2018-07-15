@@ -5,16 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Salutem.Views.User
+namespace Salutem.Views.Specialist.Appointment
 {
-    public partial class SearchAppointment : System.Web.UI.Page
+    public partial class SearchAppointmentSpecialistCancel : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnBuscar_Click(object sender, EventArgs e)
         {
 
         }

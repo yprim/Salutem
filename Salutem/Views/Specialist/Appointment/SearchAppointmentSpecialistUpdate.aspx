@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="SearchAppointment.aspx.cs" Inherits="Salutem.Views.User.SearchAppointment" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="SearchAppointmentSpecialist.aspx.cs" Inherits="Salutem.Views.Specialist.SearchAppointmentSpecialist" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -66,7 +66,6 @@
                     "<th scope='col'>Fecha de la cita</th>" +
                     "<th scope='col'>Hora de la cita</th>" +
                     "<th scope='col'>Estado de la cita</th>" +
-                    "<th scope='col'>Eliminar</th>" +
                     "<th scope='col'>Actualizar</th>" +
                     "</tr>" +
                     "</thead>" +
@@ -89,7 +88,6 @@
                         "<td>" + appointment.aaData[i].date + "</td>" +
                         "<td>" + appointment.aaData[i].hour + "</td>" +
                         "<td>" + appointment.aaData[i].status + "</td>" +
-                        "<td> <a href='CancelAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Cancelar </a> </td>" +
                         "<td> <a href='UpdateAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Actualizar </a> </td>" +
                         "</tr>";
                 }
@@ -137,7 +135,6 @@
                         "<th scope='col'>Fecha de la cita</th>" +
                         "<th scope='col'>Hora de la cita</th>" +
                         "<th scope='col'>Estado de la cita</th>" +
-                        "<th scope='col'>Eliminar</th>" +
                         "<th scope='col'>Actualizar</th>" +
                         "</tr>" +
                         "</thead>" +
@@ -160,7 +157,6 @@
                             "<td>" + appointment.aaData[i].date + "</td>" +
                             "<td>" + appointment.aaData[i].hour + "</td>" +
                             "<td>" + appointment.aaData[i].status + "</td>" +
-                            "<td> <a href='CancelAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Cancelar </a> </td>" +
                             "<td> <a href='UpdateAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Actualizar </a> </td>" +
                             "</tr>";
                     }
@@ -193,8 +189,8 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar cita <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx") %>'> Agendar cita</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialist.aspx") %>'> Cancelar cita</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialist.aspx") %>'> Actualizar cita</a></li>
+                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialistCancel.aspx") %>'> Cancelar cita</a></li> 
+                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialistUpdate.aspx") %>'> Actualizar cita</a></li>
                 </ul>
             </li>
 

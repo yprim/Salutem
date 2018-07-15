@@ -25,3 +25,12 @@ C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\ne
 C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfo.cs
 C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.dll
 C:\Users\LAB-15\Documents\PRISCILLLA\analisis\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.pdb
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\bin\Debug\netstandard2.0\SalutemDomain.deps.json
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\bin\Debug\netstandard2.0\SalutemDomain.dll
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\bin\Debug\netstandard2.0\SalutemDomain.pdb
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.csprojAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.csproj.CoreCompileInputs.cache
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfoInputs.cache
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfo.cs
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.dll
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.pdb

@@ -10,79 +10,43 @@
 namespace Salutem.Views.User {
     
     
-    public partial class InsertAppointment {
+    public partial class UpdateAppointment {
         
         /// <summary>
-        /// form1 control.
+        /// formBuscarCita control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formBuscarCita;
         
         /// <summary>
-        /// lblNumCedula control.
+        /// lblDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumCedula;
+        protected global::System.Web.UI.WebControls.Label lblDate;
         
         /// <summary>
-        /// txtNumCedula control.
+        /// clDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumCedula;
+        protected global::System.Web.UI.WebControls.Calendar clDate;
         
         /// <summary>
-        /// lblNombreCliente control.
+        /// lblActualHour control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreCliente;
-        
-        /// <summary>
-        /// txtNombreCliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreCliente;
-        
-        /// <summary>
-        /// lblFecha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFecha;
-        
-        /// <summary>
-        /// clFechaCita control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar clFechaCita;
-        
-        /// <summary>
-        /// lblHora control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHora;
+        protected global::System.Web.UI.WebControls.Label lblActualHour;
         
         /// <summary>
         /// txtHour control.
@@ -94,13 +58,22 @@ namespace Salutem.Views.User {
         protected global::System.Web.UI.WebControls.TextBox txtHour;
         
         /// <summary>
-        /// btnAgendar control.
+        /// lblMensaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgendar;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        
+        /// <summary>
+        /// txtMensaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMensaje;
         
         /// <summary>
         /// btnActualizar control.
@@ -110,15 +83,6 @@ namespace Salutem.Views.User {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnActualizar;
-        
-        /// <summary>
-        /// btnCancelar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelar;
         
         /// <summary>
         /// menuAppointmentInsert control.

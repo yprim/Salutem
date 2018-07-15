@@ -19,12 +19,7 @@
                     <br>
                     <form id="form1" runat="server">
                         <div class="form-group">
-                            <asp:Label ID="lblNumCedula" runat="server" Text="Número de cedula del cliente"></asp:Label>
-                            <asp:TextBox ID="txtNumCedula" runat="server" class="form-control" placeholder="Número de cédula"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <asp:Label ID="lblNombreCliente" runat="server" Text="Nombre cliente"></asp:Label>
-                            <asp:TextBox ID="txtNombreCliente" runat="server" class="form-control" placeholder="Nombre del cliente"></asp:TextBox>
+                            <asp:TextBox ID="txtId" type="hidden" runat="server" class="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="lblFecha" runat="server" Text="Fecha de la cita"></asp:Label>
@@ -34,10 +29,15 @@
                             <asp:Label ID="lblHora" runat="server" Text="Hora de la cita"></asp:Label>
                             <asp:TextBox ID="txtHour" runat="server" class="form-control" placeholder="Hora de la cita"></asp:TextBox>
                         </div>
-                                
+                        
+                        <div class="form-group">
+                            <asp:Label ID="lblMensaje" runat="server" Text="Mensaje del sistema"></asp:Label>
+                            <asp:TextBox ID="txtMensaje" ReadOnly="true" runat="server" class="form-control" TextMode="MultiLine"></asp:TextBox>
+                        </div>
+
                         <!-- Se usa para evitar ataques de peticiones POST de sitios maliciosos-->
                         <asp:Button ID="btnAgendar" runat="server" CssClass="btn btn-info" Text="Agendar" OnClick="btnAgendar_Click" /> &nbsp;
-                        <asp:Button ID="btnActualizar" runat="server" CssClass="btn btn-danger" Text="Actualizar" OnClick="btnActualizar_Click" /> &nbsp;
+                        &nbsp;
                         <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-warning" Text="Cancelar" OnClick="btnCancelar_Click" />
                         <br>
                         <br>
@@ -64,22 +64,6 @@
             </li>
 
             <li><a href="#credits">Créditos</a></li>
-
-            <li><a data-placement="bottom" data-toggle="popover" data-title="Iniciar Sesión" data-container="body" type="button" data-html="true" id="login">Iniciar Sesión</a></li>
-			<div id="popover-content" class="hide">
-				<form>
-					<div class="form-group">
-					    <label for="exampleInputEmail1">Correo</label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo">
-					    <small id="emailHelp" class="form-text text-muted"></small>
-					</div>
-					<div class="form-group">
-					    <label for="exampleInputPassword1">Contraseña</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
-					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</form>
-			</div>
 
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search...">

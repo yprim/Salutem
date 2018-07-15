@@ -1,4 +1,11 @@
 
+.errorColor {
+    color: red;
+    font-weight: bold;
+    text-align:justify;
+    font-size:25px;
+}
+
 .borderRounded{
   border-radius: 22px 22px 22px 22px;
 -moz-border-radius: 22px 22px 22px 22px;
