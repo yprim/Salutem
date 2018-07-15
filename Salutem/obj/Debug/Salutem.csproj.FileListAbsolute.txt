@@ -788,3 +788,4 @@ C:\Users\Danny\Documents\GitHub\Salutem\Salutem\obj\Debug\Salutem.csproj.CoreCom
 C:\Users\Danny\Documents\GitHub\Salutem\Salutem\obj\Debug\Salutem.csproj.CopyComplete
 C:\Users\Danny\Documents\GitHub\Salutem\Salutem\obj\Debug\Salutem.dll
 C:\Users\Danny\Documents\GitHub\Salutem\Salutem\obj\Debug\Salutem.pdb
+C:\Users\Danny\Documents\GitHub\Salutem\Salutem\bin\itextsharp.dll

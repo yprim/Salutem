@@ -45,6 +45,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp">
+      <HintPath>..\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -167,6 +170,7 @@
     <Content Include="Views\Assistant\SearchAppointmentGeneral.aspx" />
     <Content Include="Views\Collaborator\SearchAppointmentUpdate.aspx" />
     <Content Include="Views\CredentialsError.aspx" />
+    <Content Include="Views\Report\Report.aspx" />
     <Content Include="Views\Specialist\Appointment\CancelAppointmentSpecialist.aspx" />
     <Content Include="Views\Specialist\Appointment\InsertAppointmentSpecialist.aspx" />
     <Content Include="Views\Specialist\Appointment\SearchAppointmentSpecialistCancel.aspx" />
@@ -324,6 +328,13 @@
     </Compile>
     <Compile Include="Views\CredentialsError.aspx.designer.cs">
       <DependentUpon>CredentialsError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Report\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Report\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Specialist\Appointment\CancelAppointmentSpecialist.aspx.cs">
       <DependentUpon>CancelAppointmentSpecialist.aspx</DependentUpon>
