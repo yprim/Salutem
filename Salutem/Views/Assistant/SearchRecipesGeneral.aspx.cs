@@ -5,19 +5,23 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Salutem.Views.Collaborator
+namespace Salutem.Views.Assistant
 {
-    public partial class SearchAppointmentUpdate : System.Web.UI.Page
+    public partial class GetRecipes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             //================================================================
             //Navigation
             //================================================================
-            menuAppointmentInsert.HRef = "~/Views/Collaborator/InsertAppointment.aspx";
-            menuAppointmentCancel.HRef = "~/Views/Collaborator/SearchAppointmentCancel.aspx";
-            menuAppointmentUpdate.HRef = "~/Views/Collaborator/SearchAppointmentUpdate.aspx";
-            menuAppointmentGet.HRef = "~/Views/Collaborator/SearchAppointmentGeneral.aspx";
+            menuAppointmentInsert.HRef = "~/Views/Assistant/InsertAppointment.aspx";
+            menuAppointmentCancel.HRef = "~/Views/Assistant/SearchAppointmentCancel.aspx";
+            menuAppointmentUpdate.HRef = "~/Views/Assistant/SearchAppointmentUpdate.aspx";
+            menuAppointmentGetRecipes.HRef = "~/Views/Assistant/SearchRecipesGeneral.aspx";
+            menuClient.HRef = "~/Views/Assistant/Reports/ReportNumberUsersPerDay.aspx";
+            menuSchedule1.HRef = "~/Views/Assistant/Reports/ScheduleReportWithTheMostvisits.aspx";
+            menuSchedule2.HRef = "~/Views/Assistant/Reports/ScheduleReportWithTheSmallestNumberOfVisits.aspx";
+            menuAppointmentGet.HRef = "~/Views/Assistant/SearchAppointmentGeneral.aspx";
             //================================================================
 
             //================================================================
@@ -32,19 +36,20 @@ namespace Salutem.Views.Collaborator
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = true;
-                        menuAppointmentUpdate.Visible = true;
+                        //No tiene los credenciales requeridos
                         break;
                     case "Assistant":
                         menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
-                        break;
-                    case "Collaborator":
-                        menuAppointmentInsert.Visible = true;
                         menuAppointmentCancel.Visible = true;
                         menuAppointmentUpdate.Visible = true;
+                        menuAppointmentGetRecipes.Visible = true;
+                        menuClient.Visible = true;
+                        menuSchedule1.Visible = true;
+                        menuSchedule2.Visible = true;
+                        menuAppointmentGet.Visible = true;
+                        break;
+                    case "Collaborator":
+                        //No tiene los credenciales requeridos
                         break;
                     default:
                         Response.Redirect("../../UrlError.aspx");

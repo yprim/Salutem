@@ -44,8 +44,17 @@ namespace Salutem.Views.Specialist
 
             //Se guarda un mensaje basado en la operación que se realizo
             operationMessage = this.appointmentBusiness.cancelAppointmentWithoutAppointmentIdBusiness(this.appo, this.user);
-            
-            txtMensaje.Text = operationMessage;
+
+            //Se valida que la operación sea exitosa
+            if (operationMessage != "Error al ejecutar la operación en la base de datos")
+            {
+                txtMensaje.Text = "La operación se realizo satisfactoriamente";
+            }
+            else
+            {
+                txtMensaje.Text = operationMessage;
+            }
         }
+
     }
 }

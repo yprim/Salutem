@@ -1,24 +1,25 @@
 ﻿using SalutemBusiness;
 using SalutemDomain;
 using System;
+using System.Web.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Salutem.Views.User
+namespace Salutem.Views.Assistant
 {
-    public partial class CancelAppointment : System.Web.UI.Page
+    public partial class DeleteAppointment : System.Web.UI.Page
     {
         #region
         private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         private AppointmentBusiness appointmentBusiness = null;
-        private Appointment appo = null;
+        private UserBusiness userBusiness = null;
+        private SalutemDomain.Appointment appo = null;
         private Userr user = null;
         private static string finalDate = "";
-        private string operationMessage = "";
+        private string validateMessage = "", operationMessage = "";
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -26,16 +27,20 @@ namespace Salutem.Views.User
             if (!IsPostBack)
             {
                 txtActualDate.Text = Request["date"];
-                txtActualHour.Text = Request["hour"];
+                txtHour.Text = Request["hour"];
             }
 
             //================================================================
             //Navigation
             //================================================================
-            menuAppointmentInsert.HRef = "~/Views/Collaborator/InsertAppointment.aspx";
-            menuAppointmentCancel.HRef = "~/Views/Collaborator/SearchAppointmentCancel.aspx";
-            menuAppointmentUpdate.HRef = "~/Views/Collaborator/SearchAppointmentUpdate.aspx";
-            menuAppointmentGet.HRef = "~/Views/Collaborator/SearchAppointmentGeneral.aspx";
+            menuAppointmentInsert.HRef = "~/Views/Assistant/InsertAppointment.aspx";
+            menuAppointmentCancel.HRef = "~/Views/Assistant/SearchAppointmentCancel.aspx";
+            menuAppointmentUpdate.HRef = "~/Views/Assistant/SearchAppointmentUpdate.aspx";
+            menuAppointmentGetRecipes.HRef = "~/Views/Assistant/SearchRecipesGeneral.aspx";
+            menuClient.HRef = "~/Views/Assistant/Reports/ReportNumberUsersPerDay.aspx";
+            menuSchedule1.HRef = "~/Views/Assistant/Reports/ScheduleReportWithTheMostvisits.aspx";
+            menuSchedule2.HRef = "~/Views/Assistant/Reports/ScheduleReportWithTheSmallestNumberOfVisits.aspx";
+            menuAppointmentGet.HRef = "~/Views/Assistant/SearchAppointmentGeneral.aspx";
             //================================================================
 
             //================================================================
@@ -50,19 +55,20 @@ namespace Salutem.Views.User
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = true;
-                        menuAppointmentUpdate.Visible = true;
+                        //No tiene los credenciales requeridos
                         break;
                     case "Assistant":
                         menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
-                        break;
-                    case "Collaborator":
-                        menuAppointmentInsert.Visible = true;
                         menuAppointmentCancel.Visible = true;
                         menuAppointmentUpdate.Visible = true;
+                        menuAppointmentGetRecipes.Visible = true;
+                        menuClient.Visible = true;
+                        menuSchedule1.Visible = true;
+                        menuSchedule2.Visible = true;
+                        menuAppointmentGet.Visible = true;
+                        break;
+                    case "Collaborator":
+                        //No tiene los credenciales requeridos
                         break;
                     default:
                         Response.Redirect("../../UrlError.aspx");
@@ -81,7 +87,7 @@ namespace Salutem.Views.User
 
             this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
-            this.appo = new Appointment(Convert.ToInt32(txtActualHour.Text), finalDate);
+            this.appo = new Appointment(Convert.ToInt32(txtHour.Text), finalDate);
             this.user = new Userr(Request["identityCard"].ToString());
 
             //Se guarda un mensaje basado en la operación que se realizo

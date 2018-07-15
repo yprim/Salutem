@@ -118,6 +118,8 @@
                     dataType: 'text',
                     data: { identityCard: identityCard },
                     beforeSend: function () {
+                        $('#loadData').show();/*Se muestra el gif de carga antes de
+                        solicitar los datos a la bd*/
                     }
                 })
                 .done(function (resp) {

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="SearchAppointmentSpecialistCancel.aspx.cs" Inherits="Salutem.Views.Specialist.Appointment.SearchAppointmentSpecialistCancel" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="SearchAppointmentSpecialistGeneral.aspx.cs" Inherits="Salutem.Views.Specialist.Appointment.SearchAppointmentSpecialistGeneral" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -15,7 +15,7 @@
         <br>
         <div class="container borderRounded">
             <center>
-                <h3>Buscar cita</h3>
+                <h3>Obtener cita</h3>
             </center>
             <div class="col-md-offset-4">
                 <div class="col-lg-8">
@@ -66,7 +66,6 @@
                     "<th scope='col'>Fecha de la cita</th>" +
                     "<th scope='col'>Hora de la cita</th>" +
                     "<th scope='col'>Estado de la cita</th>" +
-                    "<th scope='col'>Cancelar</th>" +
                     "</tr>" +
                     "</thead>" +
                     "<tbody>";
@@ -88,7 +87,6 @@
                         "<td>" + appointment.aaData[i].date + "</td>" +
                         "<td>" + appointment.aaData[i].hour + "</td>" +
                         "<td>" + appointment.aaData[i].status + "</td>" +
-                        "<td> <a href='CancelAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Cancelar </a> </td>" +
                         "</tr>";
                 }
 
@@ -137,7 +135,6 @@
                         "<th scope='col'>Fecha de la cita</th>" +
                         "<th scope='col'>Hora de la cita</th>" +
                         "<th scope='col'>Estado de la cita</th>" +
-                        "<th scope='col'>Cancelar</th>" +
                         "</tr>" +
                         "</thead>" +
                         "<tbody>";
@@ -159,7 +156,6 @@
                             "<td>" + appointment.aaData[i].date + "</td>" +
                             "<td>" + appointment.aaData[i].hour + "</td>" +
                             "<td>" + appointment.aaData[i].status + "</td>" +
-                            "<td> <a href='CancelAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Cancelar </a> </td>" +
                             "</tr>";
                     }
 

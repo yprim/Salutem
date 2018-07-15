@@ -177,43 +177,24 @@
                     <li><a id="menuAppointmentInsert" runat="server">Agendar cita</a></li>
                     <li><a id="menuAppointmentCancel" runat="server">Cancelar cita</a></li> 
                     <li><a id="menuAppointmentUpdate" runat="server">Actualizar cita</a></li>
+                    <li><a id="menuAppointmentGet" runat="server"> Obtener cita</a></li>
                 </ul>
             </li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Reportes <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ReportNumberUsersPerDay.aspx") %>'> Clientes atendidos por día</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheMostvisits.aspx") %>'> Horario con mayor cantidad de visitas</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheSmallestNumberOfVisits.aspx") %>'> Horario con menor cantidad de visitas</a></li>
+                    <li><a id="menuClient" runat="server"> Clientes atendidos por día</a></li>
+                    <li><a id="menuSchedule1" runat="server"> Horario con mayor cantidad de visitas</a></li> 
+                    <li><a id="menuSchedule2" runat="server"> Horario con menor cantidad de visitas</a></li>
                 </ul>
             </li>
 
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar receta <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/GetRecipeSpecialist.aspx") %>'> Obtener receta</a></li>
-
-                </ul>
+                <a id="menuAppointmentGetRecipes" runat="server"> Obtener receta</a>
             </li>
 
             <li><a href="#credits">Créditos</a></li>
-
-            <li><a data-placement="bottom" data-toggle="popover" data-title="Iniciar Sesión" data-container="body" type="button" data-html="true" id="login">Iniciar Sesión</a></li>
-			<div id="popover-content" class="hide">
-				<form id="form1" runat="server">
-					<div class="form-group">
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter email"></asp:TextBox>
-                    </div>
-					<div class="form-group">
-                        <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>		
-                    </div>
-
-                    
-
-                    <asp:Button ID="btnLogin" CssClass="btn btn-primary" runat="server"  Text="Login" OnClick="btnLogin_Click"/>
-				</form>
-			</div>
 
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar...">
@@ -223,7 +204,8 @@
             </div><!-- /input-group -->
         </ul>
     </div>
+</asp:Content>
 
-   
-
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaultAssistant.aspx") %>'>Salutem</a>
 </asp:Content>

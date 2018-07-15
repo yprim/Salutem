@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="SearchAppointmentSpecialistCancel.aspx.cs" Inherits="Salutem.Views.Specialist.Appointment.SearchAppointmentSpecialistCancel" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Salutem.Master" AutoEventWireup="true" CodeBehind="SearchAppointmentUpdate.aspx.cs" Inherits="Salutem.Views.Assistant.SearchUpdateAppointment" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -15,7 +15,7 @@
         <br>
         <div class="container borderRounded">
             <center>
-                <h3>Buscar cita</h3>
+                <h3>Obtener cita</h3>
             </center>
             <div class="col-md-offset-4">
                 <div class="col-lg-8">
@@ -66,7 +66,7 @@
                     "<th scope='col'>Fecha de la cita</th>" +
                     "<th scope='col'>Hora de la cita</th>" +
                     "<th scope='col'>Estado de la cita</th>" +
-                    "<th scope='col'>Cancelar</th>" +
+                    "<th scope='col'>Actualizar</th>" +
                     "</tr>" +
                     "</thead>" +
                     "<tbody>";
@@ -88,7 +88,7 @@
                         "<td>" + appointment.aaData[i].date + "</td>" +
                         "<td>" + appointment.aaData[i].hour + "</td>" +
                         "<td>" + appointment.aaData[i].status + "</td>" +
-                        "<td> <a href='CancelAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Cancelar </a> </td>" +
+                        "<td> <a href='UpdateAppointment.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Actualizar </a> </td>" +
                         "</tr>";
                 }
 
@@ -137,7 +137,7 @@
                         "<th scope='col'>Fecha de la cita</th>" +
                         "<th scope='col'>Hora de la cita</th>" +
                         "<th scope='col'>Estado de la cita</th>" +
-                        "<th scope='col'>Cancelar</th>" +
+                        "<th scope='col'>Actualizar</th>" +
                         "</tr>" +
                         "</thead>" +
                         "<tbody>";
@@ -159,7 +159,7 @@
                             "<td>" + appointment.aaData[i].date + "</td>" +
                             "<td>" + appointment.aaData[i].hour + "</td>" +
                             "<td>" + appointment.aaData[i].status + "</td>" +
-                            "<td> <a href='CancelAppointmentSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Cancelar </a> </td>" +
+                            "<td> <a href='UpdateAppointment.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "'>Actualizar </a> </td>" +
                             "</tr>";
                     }
 
@@ -186,50 +186,44 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
+            <li class="active"><a href="#header">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
 
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar cita <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar citas<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx") %>'> Agendar cita</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialistCancel.aspx") %>'> Cancelar cita</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Appointment/SearchAppointmentSpecialistUpdate.aspx") %>'> Actualizar cita</a></li>
+                    <li><a id="menuAppointmentInsert" runat="server">Agendar cita</a></li>
+                    <li><a id="menuAppointmentCancel" runat="server">Cancelar cita</a></li> 
+                    <li><a id="menuAppointmentUpdate" runat="server">Actualizar cita</a></li>
+                    <li><a id="menuAppointmentGet" runat="server"> Obtener cita</a></li>
                 </ul>
             </li>
-
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar receta <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/InsertRecipeSpecialist.aspx") %>'> Generar receta</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/SearchRecipeSpecialist.aspx") %>'> Cancela receta</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/SearchRecipeSpecialist.aspx") %>'> Actualizar receta</a></li>
-                </ul>
-            </li>
-
-            <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Recipe/SearchRecipeSpecialist.aspx") %>'>Obtener receta</a></li>
-
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar diagnóstico <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/InsertDiagnosis.aspx") %>'> Generar diagnóstico</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.apsx") %>'> Eliminar diagnóstico</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'> Actualizar diagnóstico</a></li>
-                </ul>
-            </li>
-
-            <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'>Obtener diagnóstico</a></li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Reportes <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ReportNumberUsersPerDay.aspx") %>'> Clientes atendidos por día</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheMostvisits.aspx") %>'> Horario con mayor cantidad de visitas</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheSmallestNumberOfVisits.aspx") %>'> Horario con menor cantidad de visitas</a></li>
+                    <li><a id="menuClient" runat="server"> Clientes atendidos por día</a></li>
+                    <li><a id="menuSchedule1" runat="server"> Horario con mayor cantidad de visitas</a></li> 
+                    <li><a id="menuSchedule2" runat="server"> Horario con menor cantidad de visitas</a></li>
                 </ul>
             </li>
+
+            <li class="dropdown">
+                <a id="menuAppointmentGetRecipes" runat="server"> Obtener receta</a>
+            </li>
+
+            <li><a href="#credits">Créditos</a></li>
+
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar...">
+                <span class="input-group-btn">
+                    <button class="btn btn-info" type="button">Buscar</button>
+                </span>
+            </div><!-- /input-group -->
         </ul>
     </div>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaulSpecialist.aspx") %>'>Salutem</a>
+    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaultAssistant.aspx") %>'>Salutem</a>
 </asp:Content>

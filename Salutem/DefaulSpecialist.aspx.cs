@@ -17,6 +17,7 @@ namespace Salutem
             menuAppointmentInsert.HRef = "~/Views/Specialist/Appointment/InsertAppointmentSpecialist.aspx";
             menuAppointmentCancel.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistCancel.aspx";
             menuAppointmentUpdate.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistUpdate.aspx";
+            menuAppointmentGet.HRef = "~/Views/Specialist/Appointment/SearchAppointmentSpecialistGeneral.aspx";
             //================================================================
 
             //================================================================
@@ -33,16 +34,13 @@ namespace Salutem
                         menuAppointmentUpdate.Visible = true;
                         break;
                     case "Assistant":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
+                        //No tiene los credenciales requeridos
                         break;
                     case "Collaborator":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
+                        //No tiene los credenciales requeridos
                         break;
                     default:
+                        //Error
                         break;
                 }
             } catch {

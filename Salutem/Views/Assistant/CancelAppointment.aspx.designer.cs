@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Salutem.Views.User {
+namespace Salutem.Views.Assistant {
     
     
-    public partial class UpdateAppointment {
+    public partial class DeleteAppointment {
         
         /// <summary>
         /// formBuscarCita control.
@@ -22,22 +22,22 @@ namespace Salutem.Views.User {
         protected global::System.Web.UI.HtmlControls.HtmlForm formBuscarCita;
         
         /// <summary>
-        /// lblDate control.
+        /// lblActualDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDate;
+        protected global::System.Web.UI.WebControls.Label lblActualDate;
         
         /// <summary>
-        /// clDate control.
+        /// txtActualDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar clDate;
+        protected global::System.Web.UI.WebControls.TextBox txtActualDate;
         
         /// <summary>
         /// lblActualHour control.
@@ -76,13 +76,13 @@ namespace Salutem.Views.User {
         protected global::System.Web.UI.WebControls.TextBox txtMensaje;
         
         /// <summary>
-        /// btnActualizar control.
+        /// btnCancelar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActualizar;
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
         
         /// <summary>
         /// menuAppointmentInsert control.
@@ -119,5 +119,41 @@ namespace Salutem.Views.User {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentGet;
+        
+        /// <summary>
+        /// menuClient control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuClient;
+        
+        /// <summary>
+        /// menuSchedule1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuSchedule1;
+        
+        /// <summary>
+        /// menuSchedule2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuSchedule2;
+        
+        /// <summary>
+        /// menuAppointmentGetRecipes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentGetRecipes;
     }
 }

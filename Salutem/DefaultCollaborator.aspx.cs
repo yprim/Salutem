@@ -31,14 +31,11 @@ namespace Salutem
                 switch (Session["rol"])
                 {
                     case "Specialist":
-                        menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = true;
-                        menuAppointmentUpdate.Visible = true;
+                        //No tiene los credenciales requeridos
                         break;
                     case "Assistant":
                         menuAppointmentInsert.Visible = true;
-                        menuAppointmentCancel.Visible = false;
-                        menuAppointmentUpdate.Visible = false;
+                        //No tiene los credenciales requeridos
                         break;
                     case "Collaborator":
                         menuAppointmentInsert.Visible = true;
@@ -46,6 +43,7 @@ namespace Salutem
                         menuAppointmentUpdate.Visible = true;
                         break;
                     default:
+                        //Error
                         break;
                 }
             }

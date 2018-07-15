@@ -40,39 +40,48 @@ namespace Salutem {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentUpdate;
         
         /// <summary>
-        /// form1 control.
+        /// menuAppointmentGet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentGet;
         
         /// <summary>
-        /// txtEmail control.
+        /// menuClient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuClient;
         
         /// <summary>
-        /// txtPassword control.
+        /// menuSchedule1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuSchedule1;
         
         /// <summary>
-        /// btnLogin control.
+        /// menuSchedule2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuSchedule2;
+        
+        /// <summary>
+        /// menuAppointmentGetRecipes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentGetRecipes;
     }
 }

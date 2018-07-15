@@ -169,6 +169,7 @@
     <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
             <li class="active"><a href="#header">Inicio</a></li>
+
             <li><a href="#servicios">Servicios</a></li>
 
             <li class="dropdown">
@@ -191,4 +192,8 @@
         </ul>
     </div>
     
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+    <a class="navbar-brand" href='<%=Page.ResolveUrl("~/DefaulSpecialist.aspx") %>'>Salutem</a>
 </asp:Content>
