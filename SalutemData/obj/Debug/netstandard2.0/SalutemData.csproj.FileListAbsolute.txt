@@ -50,3 +50,16 @@ C:\Users\Danny\Documents\GitHub\Salutem\SalutemData\obj\Debug\netstandard2.0\Sal
 C:\Users\Danny\Documents\GitHub\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csproj.CopyComplete
 C:\Users\Danny\Documents\GitHub\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.dll
 C:\Users\Danny\Documents\GitHub\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.pdb
+C:\Users\mhdez93\Documents\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemData.deps.json
+C:\Users\mhdez93\Documents\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemData.dll
+C:\Users\mhdez93\Documents\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemData.pdb
+C:\Users\mhdez93\Documents\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemDomain.dll
+C:\Users\mhdez93\Documents\Salutem\SalutemData\bin\Debug\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\mhdez93\Documents\Salutem\SalutemData\bin\Debug\netstandard2.0\SalutemDomain.pdb
+C:\Users\mhdez93\Documents\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csprojAssemblyReference.cache
+C:\Users\mhdez93\Documents\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csproj.CoreCompileInputs.cache
+C:\Users\mhdez93\Documents\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.AssemblyInfoInputs.cache
+C:\Users\mhdez93\Documents\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.AssemblyInfo.cs
+C:\Users\mhdez93\Documents\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.csproj.CopyComplete
+C:\Users\mhdez93\Documents\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.dll
+C:\Users\mhdez93\Documents\Salutem\SalutemData\obj\Debug\netstandard2.0\SalutemData.pdb
