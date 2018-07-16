@@ -10,6 +10,9 @@ namespace SalutemDomain
         public string description { get; set; }
         public string date { get; set; }
         public int hour { get; set; }
+        public string status { get; set; }
+        public string userName { get; set; }
+        public int identityCard { get; set; }
 
         public Diagnosis() { }
 

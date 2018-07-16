@@ -26,6 +26,17 @@ namespace Salutem
             menuAppointmentUpdateRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistUpdate.aspx";
             menuAppointmentGetRecipe.HRef = "~/Views/Specialist/Recipe/SearchRecipeSpecialistGeneral.aspx";
 
+            //Diágnostico
+            menuDiagnosisCreateDiagnosis.HRef = "~/Views/Specialist/Diagnosis/InsertDiagnosis.aspx";
+            menuDiagnosisDeleteDiagnosis.HRef = "~/Views/Specialist/Diagnosis/SearchDiagnosisCancel.aspx";
+            menuDiagnosisUpdateDiagnosis.HRef = "~/Views/Specialist/Diagnosis/SearchDiagnosisUpdate.aspx";
+            menuDiagnosisGetDiagnosis.HRef =    "~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx";
+
+            //Reportes
+            menuCli.HRef = "~/Views/Specialist/Resports/ReportNumberUsersPerDay.aspx";
+            menuCh1.HRef = "~/Views/Specialist/Resports/ScheduleReportWithTheMostvisits.aspx";
+            menuCh2.HRef = "~/Views/Specialist/Resports/ScheduleReportWithTheSmallestNumberOfVisits.aspx";
+
             //================================================================
 
             //================================================================

@@ -1,36 +1,16 @@
-﻿using SalutemBusiness;
-using SalutemDomain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Salutem.Views.Specialist.Diagnosis
 {
-    public partial class DeleteDiagnosis : System.Web.UI.Page
+    public partial class SearchDiagnosisCancel : System.Web.UI.Page
     {
-        #region
-            private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
-            private DiagnosisBusiness diagnosisBusiness = null;
-            private SalutemDomain.Diagnosis diagnosis = null;
-            private Userr user = null;
-            private string operationMessage = "", finalDate = "";
-        #endregion
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                txtNumCedula.Text = Request["identityCard"];
-                txtHour.Text = Request["hour"];
-                txtDescripcion.Text = Request["description"]; ;
-
-                txtFecha.Text = Request["date"];
-            }
-
             //================================================================
             //Navigation
             //================================================================
@@ -94,28 +74,6 @@ namespace Salutem.Views.Specialist.Diagnosis
             {
             }
             //================================================================
-        }
-
-        protected void btnEliminarDiagnostico_Click(object sender, EventArgs e)
-        {
-            finalDate = txtFecha.Text;
-
-            this.diagnosisBusiness = new DiagnosisBusiness(this.conn);
-            this.diagnosis = new SalutemDomain.Diagnosis(finalDate, Convert.ToInt32(txtHour.Text));
-            this.user = new Userr(txtNumCedula.Text);
-
-            //Se guarda un mensaje basado en la operación que se realizo
-            operationMessage = this.diagnosisBusiness.deleteDiagnosisWithoutDiagnosisIdBusiness(this.diagnosis, this.user);
-
-            //Se valida que la operación sea exitosa
-            if (operationMessage != "Error al ejecutar la operación en la base de datos")
-            {
-                txtMensaje.Text = "La operación se realizo satisfactoriamente";
-            }
-            else
-            {
-                txtMensaje.Text = operationMessage;
-            }
         }
     }
 }

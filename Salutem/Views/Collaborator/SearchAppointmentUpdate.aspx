@@ -22,8 +22,8 @@
                     <br>
                     <form id="formBuscarCita" runat="server">
                         <div class="form-group">
-                            <label for="NumCedula"> Número de cédula </label>
-                            <input type="text" class="form-control" placeholder="Número de cédula" id="app_search">
+                            <label for="Estado"> Estado de la cita</label>
+                            <input type="text" class="form-control" placeholder="Estado de la cita" id="app_search">
                         </div>
                         <!-- Gif de carga-->
                         <img id="loadData" class="center" src="../../../img/ajax-loader.gif" width="10%" alt="">
@@ -113,13 +113,13 @@
 
             /*Se hace la busqueda de la aplicación de acuerdo a lo que ingreso el usuario*/
             $('#app_search').keyup(function () {
-                var date = $(this).val();
+                var status = $(this).val();
 
                 $.ajax({
                     url: '../../../SalutemService.asmx/getAppointmentsBusinessFilters',
                     type: 'POST',
                     dataType: 'text',
-                    data: { identityCard: identityCard, date: date },
+                    data: { identityCard: identityCard, status: status },
                     beforeSend: function () {
                         $('#loadData').show();/*Se muestra el gif de carga antes de
                         solicitar los datos a la bd*/

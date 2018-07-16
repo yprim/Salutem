@@ -98,21 +98,44 @@ namespace Salutem.Views.Specialist.Recipe
 
             finalDate = formatDate[2] + "-" + formatDate[0] + "-" + formatDate[1];
 
-            this.recipeBusiness = new RecipeBusiness(this.conn);
-            this.recipe = new SalutemDomain.Recipe(txtDescripcion.Text, finalDate, Convert.ToInt32(txtActualHour.Text));
-            this.user = new Userr(txtNumCedula.Text);
+            //Se valida la fecha
+            validateMessage = validateDate(finalDate, Convert.ToInt32(txtActualHour.Text));
 
-            operationMessage = this.recipeBusiness.updateRecipeWithoutDiagnosisIdBusiness(this.recipe, this.user, txtOldDate.Text, Convert.ToInt32(txtOldHour.Text));
-
-            //Se valida que la operación sea exitosa
-            if (operationMessage != "Error al ejecutar la operación en la base de datos")
+            if (validateMessage == "Disponible")
             {
-                txtMensaje.Text = "La operación se realizó satisfactoriamente";
+                this.recipeBusiness = new RecipeBusiness(this.conn);
+                this.recipe = new SalutemDomain.Recipe(txtDescripcion.Text, finalDate, Convert.ToInt32(txtActualHour.Text));
+                this.user = new Userr(txtNumCedula.Text);
+
+                operationMessage = this.recipeBusiness.updateRecipeWithoutDiagnosisIdBusiness(this.recipe, this.user, txtOldDate.Text, Convert.ToInt32(txtOldHour.Text));
+
+                //Se valida que la operación sea exitosa
+                if (operationMessage != "Error al ejecutar la operación en la base de datos")
+                {
+                    txtMensaje.Text = "La operación se realizó satisfactoriamente";
+                }
+                else
+                {
+                    txtMensaje.Text = operationMessage;
+                }
             }
             else
             {
-                txtMensaje.Text = operationMessage;
+                txtMensaje.Text = validateMessage;
             }
         }
+
+        private string validateDate(string date, int hour)
+        {
+            string message = "";
+
+            this.recipeBusiness = new RecipeBusiness(this.conn);
+
+            message = recipeBusiness.validateDateBusiness(date, hour);
+
+            return message;
+        }
+
+
     }
 }

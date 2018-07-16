@@ -10,42 +10,150 @@
 namespace Salutem.Views.Specialist.Diagnosis {
     
     
-    public partial class SearchDiagnosis {
+    public partial class SearchDiagnosis1 {
         
         /// <summary>
-        /// formBuscarDiagnostico control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formBuscarDiagnostico;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblNumCedula control.
+        /// menuAppointmentInsert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumCedula;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentInsert;
         
         /// <summary>
-        /// txtnumCedula control.
+        /// menuAppointmentCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtnumCedula;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentCancel;
         
         /// <summary>
-        /// btnBuscar control.
+        /// menuAppointmentUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentUpdate;
+        
+        /// <summary>
+        /// menuAppointmentGet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentGet;
+        
+        /// <summary>
+        /// menuAppointmentInsertRecipe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentInsertRecipe;
+        
+        /// <summary>
+        /// menuAppointmentCancelRecipe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentCancelRecipe;
+        
+        /// <summary>
+        /// menuAppointmentUpdateRecipe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentUpdateRecipe;
+        
+        /// <summary>
+        /// menuAppointmentGetRecipe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentGetRecipe;
+        
+        /// <summary>
+        /// menuDiagnosisCreateDiagnosis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuDiagnosisCreateDiagnosis;
+        
+        /// <summary>
+        /// menuDiagnosisDeleteDiagnosis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuDiagnosisDeleteDiagnosis;
+        
+        /// <summary>
+        /// menuDiagnosisUpdateDiagnosis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuDiagnosisUpdateDiagnosis;
+        
+        /// <summary>
+        /// menuDiagnosisGetDiagnosis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuDiagnosisGetDiagnosis;
+        
+        /// <summary>
+        /// menuCli control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuCli;
+        
+        /// <summary>
+        /// menuCh1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuCh1;
+        
+        /// <summary>
+        /// menuCh2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuCh2;
     }
 }

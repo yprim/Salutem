@@ -46,7 +46,7 @@
                                 
                     <!-- Se usa para evitar ataques de peticiones POST de sitios maliciosos-->
                     <asp:Button ID="btnIngresarDiagnostico" runat="server" CssClass="btn btn-info" Text="Ingresar" OnClick="btnIngresarDiagnostico_Click"/> &nbsp;
-                    <asp:Button ID="btnDelete" runat="server" CssClass="btn btn-danger" Text="Cancelar" OnClick="Delete_Click"/>
+                    <asp:Button ID="btnDelete" runat="server" CssClass="btn btn-danger" Text="Eliminar" OnClick="Delete_Click"/>
                     <br>
                     <br>
                 </form>

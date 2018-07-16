@@ -67,7 +67,7 @@
                     "<th scope='col'>Hora de la receta</th>" +
                     "<th scope='col'>Estado de la receta</th>" +
                     "<th scope='col'>Descripción</th>" +
-                    "<th scope='col'>Cancelar</th>" +
+                    "<th scope='col'>Eliminar</th>" +
                     "</tr>" +
                     "</thead>" +
                     "<tbody>";
@@ -91,7 +91,7 @@
                         "<td>" + appointment.aaData[i].hour + "</td>" +
                         "<td>" + appointment.aaData[i].status + "</td>" +
                         "<td>" + appointment.aaData[i].description + "</td>" +
-                        "<td> <a href='DeleteRecipeSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "&description=" + description + "'>Cancelar </a> </td>" +
+                        "<td> <a href='DeleteRecipeSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "&description=" + description + "'>Eliminar </a> </td>" +
                         "</tr>";
                 }
 
@@ -139,7 +139,7 @@
                         "<th scope='col'>Hora de la receta</th>" +
                         "<th scope='col'>Estado de la receta</th>" +
                         "<th scope='col'>Descripción</th>" +
-                        "<th scope='col'>Cancelar</th>" +
+                        "<th scope='col'>Eliminar</th>" +
                         "</tr>" +
                         "</thead>" +
                         "<tbody>";
@@ -163,7 +163,7 @@
                             "<td>" + appointment.aaData[i].hour + "</td>" +
                             "<td>" + appointment.aaData[i].status + "</td>" +
                             "<td>" + appointment.aaData[i].description + "</td>" +
-                            "<td> <a href='UpdateRecipeSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "&description=" + description + "'>Actualizar </a> </td>" +
+                            "<td> <a href='DeleteRecipeSpecialist.aspx?id=" + id + "&name=" + name + "&identityCard=" + identityCard + "&date=" + date + "&hour=" + hour +"&status=" + status + "&description=" + description + "'>Eliminar </a> </td>" +
                             "</tr>";
                     }
 

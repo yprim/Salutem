@@ -16,7 +16,12 @@ namespace SalutemData
             this.connectionString = conn;
         }
 
-        /**/
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="hour"></param>
+        /// <returns></returns>
         public string validateDateData(string date, int hour)
         {
             string message = "";
@@ -30,7 +35,7 @@ namespace SalutemData
 
                 String sql = "";
 
-                sql = "sp_validateAvailabilityOfTheDate";
+                sql = "sp_validateAvailabilityOfTheDateAppointment";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -335,7 +340,7 @@ namespace SalutemData
             return appointmentList;
         }
 
-        public List<Appointment> getAppointmentsDataFilters(string identityCard, string dateParam)
+        public List<Appointment> getAppointmentsDataFilters(string identityCard, string status)
         {
             List<Appointment> appointmentList = new List<Appointment>();
             string finalDate = "", date = "";
@@ -347,13 +352,13 @@ namespace SalutemData
 
                 String sql = "";
 
-                sql = "[sp_getAllAppointmentsFilters]";
+                sql = "[sp_getAppointmentsFilters]";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(new SqlParameter("@identityCard", identityCard));
-                cmd.Parameters.Add(new SqlParameter("@date", dateParam));
+                cmd.Parameters.Add(new SqlParameter("@status", status));
 
                 SqlDataReader reader;
                 connection.Open();
@@ -383,7 +388,6 @@ namespace SalutemData
             }
             catch (Exception ex)
             {
-
                 return appointmentList;
             }
 

@@ -50,19 +50,19 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Administrar diagnóstico <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/InsertDiagnosis.aspx") %>'> Generar diagnóstico</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'> Eliminar diagnóstico</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'> Actualizar diagnóstico</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Diagnosis/SearchDiagnosis.aspx") %>'>Obtener diagnóstico</a></li>
+                    <li><a id="menuDiagnosisCreateDiagnosis" runat="server"> Generar diagnóstico</a></li>
+                    <li><a id="menuDiagnosisDeleteDiagnosis" runat="server"> Eliminar diagnóstico</a></li> 
+                    <li><a id="menuDiagnosisUpdateDiagnosis" runat="server"> Actualizar diagnóstico</a></li>
+                    <li><a id="menuDiagnosisGetDiagnosis" runat="server">Obtener diagnóstico</a></li>
                 </ul>
             </li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right"></span>Reportes <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ReportNumberUsersPerDay.aspx") %>'> Clientes atendidos por día</a></li>
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheMostvisits.aspx") %>'> Horario con mayor cantidad de visitas</a></li> 
-                    <li><a href='<%=Page.ResolveUrl("~/Views/Specialist/Resports/ScheduleReportWithTheSmallestNumberOfVisits.aspx") %>'> Horario con menor cantidad de visitas</a></li>
+                    <li><a id="menuCli" runat="server"> Clientes atendidos por día</a></li>
+                    <li><a id="menuCh1" runat="server"> Horario con mayor cantidad de visitas</a></li> 
+                    <li><a id="menuCh2" runat="server"> Horario con menor cantidad de visitas</a></li>
                 </ul>
             </li>
 
@@ -70,7 +70,6 @@
 
             <li><a href="./LogOut.aspx">LogOut</a></li>
 
-           
         </ul>
     </div>
 </asp:Content>

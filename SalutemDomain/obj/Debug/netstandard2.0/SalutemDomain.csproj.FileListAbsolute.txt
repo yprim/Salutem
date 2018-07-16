@@ -42,3 +42,4 @@ C:\Users\mhdez93\Documents\Salutem\SalutemDomain\obj\Debug\netstandard2.0\Salute
 C:\Users\mhdez93\Documents\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.csproj.CoreCompileInputs.cache
 C:\Users\mhdez93\Documents\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfoInputs.cache
 C:\Users\mhdez93\Documents\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.AssemblyInfo.cs
+C:\Users\Danny\Documents\GitHub\Salutem\SalutemDomain\obj\Debug\netstandard2.0\SalutemDomain.csprojAssemblyReference.cache

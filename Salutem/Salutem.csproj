@@ -178,6 +178,8 @@
     <Content Include="Views\Specialist\Diagnosis\DeleteDiagnosis.aspx" />
     <Content Include="Views\Specialist\Diagnosis\InsertDiagnosis.aspx" />
     <Content Include="Views\Specialist\Diagnosis\SearchDiagnosis.aspx" />
+    <Content Include="Views\Specialist\Diagnosis\SearchDiagnosisCancel.aspx" />
+    <Content Include="Views\Specialist\Diagnosis\SearchDiagnosisUpdate.aspx" />
     <Content Include="Views\Specialist\Diagnosis\UpdateDiagnosis.aspx" />
     <Content Include="Views\Specialist\Recipe\DeleteRecipeSpecialist.aspx" />
     <Content Include="Views\Specialist\Recipe\InsertRecipeSpecialist.aspx" />
@@ -384,6 +386,20 @@
     </Compile>
     <Compile Include="Views\Specialist\Diagnosis\SearchDiagnosis.aspx.designer.cs">
       <DependentUpon>SearchDiagnosis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specialist\Diagnosis\SearchDiagnosisCancel.aspx.cs">
+      <DependentUpon>SearchDiagnosisCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Specialist\Diagnosis\SearchDiagnosisCancel.aspx.designer.cs">
+      <DependentUpon>SearchDiagnosisCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specialist\Diagnosis\SearchDiagnosisUpdate.aspx.cs">
+      <DependentUpon>SearchDiagnosisUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Specialist\Diagnosis\SearchDiagnosisUpdate.aspx.designer.cs">
+      <DependentUpon>SearchDiagnosisUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Specialist\Diagnosis\UpdateDiagnosis.aspx.cs">
       <DependentUpon>UpdateDiagnosis.aspx</DependentUpon>

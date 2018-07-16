@@ -21,9 +21,10 @@ namespace Salutem
     public class SalutemService : System.Web.Services.WebService
     {
         #region
-            private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
-            private AppointmentBusiness appointmentBusiness = null;
-            private RecipeBusiness recipeBusiness = null;
+        private string conn = WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+        private AppointmentBusiness appointmentBusiness = null;
+        private RecipeBusiness recipeBusiness = null;
+        private DiagnosisBusiness diagnosisBusiness = null;
         #endregion
 
         /// <summary>
@@ -79,10 +80,10 @@ namespace Salutem
         /// 
         /// </summary>
         [WebMethod]
-        public void getAppointmentsBusinessFilters(string identityCard, string date)
+        public void getAppointmentsBusinessFilters(string identityCard, string status)
         {
             this.appointmentBusiness = new AppointmentBusiness(conn);
-            List<Appointment> appointmentList = this.appointmentBusiness.getAppointmentsBusinessFilters(identityCard, date);
+            List<Appointment> appointmentList = this.appointmentBusiness.getAppointmentsBusinessFilters(identityCard, status);
 
             // En la variable se mete los datos necesarios para que se genere el archivo json.
             var resultado = new
@@ -158,6 +159,56 @@ namespace Salutem
         {
             this.recipeBusiness = new RecipeBusiness(conn);
             List<Recipe> appointmentList = this.recipeBusiness.getRecipesDataByIdentityCardData(identityCard);
+
+            // En la variable se mete los datos necesarios para que se genere el archivo json.
+            var resultado = new
+            {
+                iTotalRecords = appointmentList.Count,
+                iTotalDisplayRecords = appointmentList.Count,
+                aaData = appointmentList
+            };
+
+            //Se utiliza JavaScritp Serializer para poder crear el archivo json con los valores de la lista
+            //El tamaño se setea al máximo ya que esto es para consultas que devuelvan miles de tuplas.
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            js.MaxJsonLength = Int32.MaxValue;
+            Context.Response.Write(js.Serialize(resultado));
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [WebMethod]
+        public void getAllDiagnosisBusiness()
+        {
+            this.diagnosisBusiness = new DiagnosisBusiness(conn);
+            List<Diagnosis> diagnosisList = this.diagnosisBusiness.getAllDiagnosisBusiness();
+
+            // En la variable se mete los datos necesarios para que se genere el archivo json.
+            var resultado = new
+            {
+                iTotalRecords = diagnosisList.Count,
+                iTotalDisplayRecords = diagnosisList.Count,
+                aaData = diagnosisList
+            };
+
+            //Se utiliza JavaScritp Serializer para poder crear el archivo json con los valores de la lista
+            //El tamaño se setea al máximo ya que esto es para consultas que devuelvan miles de tuplas.
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            js.MaxJsonLength = Int32.MaxValue;
+            Context.Response.Write(js.Serialize(resultado));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [WebMethod]
+        public void getDiagnosisFilter(string identityCard)
+        {
+            this.diagnosisBusiness = new DiagnosisBusiness(conn);
+
+            List<Diagnosis> appointmentList = this.diagnosisBusiness.getDiagnosisBusinessFilters(identityCard);
 
             // En la variable se mete los datos necesarios para que se genere el archivo json.
             var resultado = new
