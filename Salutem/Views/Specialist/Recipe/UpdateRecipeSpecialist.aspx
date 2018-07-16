@@ -21,6 +21,8 @@
                 <form id="form1" runat="server">
                     <div class="form-group">
                         <asp:TextBox ID="txtId" type="hidden" runat="server" CssClass="form-control"></asp:TextBox>   
+                        <asp:TextBox ID="txtOldDate" type="hidden" runat="server" CssClass="form-control"></asp:TextBox>   
+                        <asp:TextBox ID="txtOldHour" type="hidden" runat="server" CssClass="form-control"></asp:TextBox>   
                     </div>
                     <div class="form-group">
                         <asp:Label ID="lblNumCedula" runat="server" Text="Número de cédula de usuario"></asp:Label>

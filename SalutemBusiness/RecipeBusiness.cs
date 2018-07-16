@@ -72,11 +72,11 @@ namespace SalutemBusiness
         /// <param name="recipe"></param>
         /// <param name="user"></param>
         /// <returns></returns>
-        public string updateRecipeWithoutDiagnosisIdBusiness(Recipe recipe, Userr user)
+        public string updateRecipeWithoutDiagnosisIdBusiness(Recipe recipe, Userr user, string oldDate, int oldHour)
         {
             string message = "";
 
-            message = recipeData.updateRecipeWithoutRecipeIdData(recipe, user);
+            message = recipeData.updateRecipeWithoutRecipeIdData(recipe, user, oldDate, oldHour);
 
 
             return message;

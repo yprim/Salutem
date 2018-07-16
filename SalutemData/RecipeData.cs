@@ -155,7 +155,7 @@ namespace SalutemData
         /// <param name="recipe"></param>
         /// <param name="user"></param>
         /// <returns></returns>
-        public string updateRecipeWithoutRecipeIdData(Recipe recipe, Userr user)
+        public string updateRecipeWithoutRecipeIdData(Recipe recipe, Userr user, string oldDate, int oldHour)
         {
             string message = "";
 
@@ -175,6 +175,8 @@ namespace SalutemData
                 cmd.Parameters.Add(new SqlParameter("@description", recipe.description));
                 cmd.Parameters.Add(new SqlParameter("@date", recipe.date));
                 cmd.Parameters.Add(new SqlParameter("@hour", recipe.hour));
+                cmd.Parameters.Add(new SqlParameter("@oldDate", oldDate));
+                cmd.Parameters.Add(new SqlParameter("@oldHour", oldHour));
 
                 SqlDataReader reader;
                 connection.Open();

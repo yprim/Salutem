@@ -31,6 +31,24 @@ namespace Salutem.Views.Specialist.Recipe {
         protected global::System.Web.UI.WebControls.TextBox txtId;
         
         /// <summary>
+        /// txtOldDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOldDate;
+        
+        /// <summary>
+        /// txtOldHour control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOldHour;
+        
+        /// <summary>
         /// lblNumCedula control.
         /// </summary>
         /// <remarks>
