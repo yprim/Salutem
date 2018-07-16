@@ -39,11 +39,6 @@
                         <asp:Label ID="lblActualHour" runat="server" Text="Hora actual"></asp:Label>
                         <asp:TextBox ID="txtActualHour" ReadOnly="true" runat="server" CssClass="form-control" placeholder="Hora"></asp:TextBox>
                     </div>
-
-                    <div class="form-group">
-                        <asp:Label ID="lblHour" runat="server" Text="Nueva hora"></asp:Label>
-                        <asp:TextBox ID="txtHour" runat="server" CssClass="form-control" placeholder="Hora"></asp:TextBox>
-                    </div>
                       
                     <div class="form-group">
                         <asp:Label ID="lblMensaje" runat="server" Text="Mensaje del sistema"></asp:Label>

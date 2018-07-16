@@ -92,7 +92,7 @@ namespace Salutem.Views.Specialist
 
             this.appointmentBusiness = new AppointmentBusiness(this.conn);
 
-            this.appo = new SalutemDomain.Appointment(Convert.ToInt32(txtHour.Text), finalDate);
+            this.appo = new SalutemDomain.Appointment(Convert.ToInt32(txtActualHour.Text), finalDate);
             this.user = new Userr(txtIdentityCard.Text);
 
             //Se guarda un mensaje basado en la operación que se realizo

@@ -27,6 +27,8 @@ namespace Salutem.Views.User
             {
                 txtHour.Text = Request["hour"];
                 txtIdentityCard.Text = Request["identityCard"];
+                txtOldDate.Text = Request["date"]; 
+                txtOldHour.Text = Request["hour"];
 
                 clDate.TodaysDate = Convert.ToDateTime(Request["date"]);
                 clDate.SelectedDate = clDate.TodaysDate;

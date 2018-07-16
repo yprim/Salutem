@@ -94,24 +94,6 @@ namespace Salutem.Views.Specialist {
         protected global::System.Web.UI.WebControls.TextBox txtActualHour;
         
         /// <summary>
-        /// lblHour control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHour;
-        
-        /// <summary>
-        /// txtHour control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHour;
-        
-        /// <summary>
         /// lblMensaje control.
         /// </summary>
         /// <remarks>
