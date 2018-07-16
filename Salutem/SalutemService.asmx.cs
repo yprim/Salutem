@@ -50,6 +50,56 @@ namespace Salutem
             Context.Response.Write(js.Serialize(resultado));
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [WebMethod]
+        public void getAllAppointmentsBusinessFilters(string identityCard)
+        {
+            this.appointmentBusiness = new AppointmentBusiness(conn);
+            List<Appointment> appointmentList = this.appointmentBusiness.getAllAppointmentsBusinessFilters(identityCard);
+
+            // En la variable se mete los datos necesarios para que se genere el archivo json.
+            var resultado = new
+            {
+                iTotalRecords = appointmentList.Count,
+                iTotalDisplayRecords = appointmentList.Count,
+                aaData = appointmentList
+            };
+
+            //Se utiliza JavaScritp Serializer para poder crear el archivo json con los valores de la lista
+            //El tamaño se setea al máximo ya que esto es para consultas que devuelvan miles de tuplas.
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            js.MaxJsonLength = Int32.MaxValue;
+            Context.Response.Write(js.Serialize(resultado));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [WebMethod]
+        public void getAppointmentsBusinessFilters(string identityCard, string date)
+        {
+            this.appointmentBusiness = new AppointmentBusiness(conn);
+            List<Appointment> appointmentList = this.appointmentBusiness.getAppointmentsBusinessFilters(identityCard, date);
+
+            // En la variable se mete los datos necesarios para que se genere el archivo json.
+            var resultado = new
+            {
+                iTotalRecords = appointmentList.Count,
+                iTotalDisplayRecords = appointmentList.Count,
+                aaData = appointmentList
+            };
+
+            //Se utiliza JavaScritp Serializer para poder crear el archivo json con los valores de la lista
+            //El tamaño se setea al máximo ya que esto es para consultas que devuelvan miles de tuplas.
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            js.MaxJsonLength = Int32.MaxValue;
+            Context.Response.Write(js.Serialize(resultado));
+        }
+
+
         /// <summary>
         /// 
         /// </summary>

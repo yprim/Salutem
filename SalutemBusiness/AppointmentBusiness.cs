@@ -77,6 +77,13 @@ namespace SalutemBusiness
             return appointmentsList;
         }
 
+        public List<Appointment> getAppointmentsBusinessFilters(string identityCard, string date)
+        {
+            List<Appointment> appointmentsList = appointmentData.getAppointmentsDataFilters(identityCard, date);
+
+            return appointmentsList;
+        }
+
         public List<Appointment> getAppointmentByIdentityCardBusiness(string identityCard)
         {
             List<Appointment> appointmentsList = appointmentData.getAppointmentByIdentityCardData(identityCard);

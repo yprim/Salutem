@@ -17,7 +17,6 @@ namespace Salutem.Views.User
             menuAppointmentInsert.HRef = "~/Views/Collaborator/InsertAppointment.aspx";
             menuAppointmentCancel.HRef = "~/Views/Collaborator/SearchAppointmentCancel.aspx";
             menuAppointmentUpdate.HRef = "~/Views/Collaborator/SearchAppointmentUpdate.aspx";
-            menuAppointmentGet.HRef = "~/Views/Collaborator/SearchAppointmentGeneral.aspx";
             //================================================================
 
             //================================================================

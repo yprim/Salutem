@@ -128,14 +128,5 @@ namespace Salutem.Views.User {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentUpdate;
-        
-        /// <summary>
-        /// menuAppointmentGet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor menuAppointmentGet;
     }
 }

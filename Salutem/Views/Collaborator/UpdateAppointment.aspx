@@ -64,7 +64,6 @@
                     <li><a id="menuAppointmentInsert" runat="server">Agendar cita</a></li>
                     <li><a id="menuAppointmentCancel" runat="server">Cancelar cita</a></li> 
                     <li><a id="menuAppointmentUpdate" runat="server">Actualizar cita</a></li>
-                    <li><a id="menuAppointmentGet" runat="server"> Obtener cita</a></li>
                 </ul>
             </li>
 

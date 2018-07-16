@@ -335,6 +335,61 @@ namespace SalutemData
             return appointmentList;
         }
 
+        public List<Appointment> getAppointmentsDataFilters(string identityCard, string dateParam)
+        {
+            List<Appointment> appointmentList = new List<Appointment>();
+            string finalDate = "", date = "";
+
+            try
+            {
+                //establecemos la conexion
+                SqlConnection connection = new SqlConnection(this.connectionString);
+
+                String sql = "";
+
+                sql = "[sp_getAllAppointmentsFilters]";
+
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@identityCard", identityCard));
+                cmd.Parameters.Add(new SqlParameter("@date", dateParam));
+
+                SqlDataReader reader;
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Appointment appo = new Appointment();
+
+                    date = reader["date"].ToString();
+
+                    string[] dateArray = date.Split(' ');
+                    string[] formatDate = dateArray[0].Split('/');
+
+                    finalDate = formatDate[2] + "-" + formatDate[0] + "-" + formatDate[1];
+
+                    appo.id = Convert.ToInt32(reader["id"].ToString());
+                    appo.date = finalDate;
+                    appo.hour = Convert.ToInt32(reader["hour"].ToString());
+                    appo.status = reader["status"].ToString();
+                    appo.user = new Userr(reader["identityCard"].ToString(), reader["name"].ToString());
+
+                    appointmentList.Add(appo);
+                }
+
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+
+                return appointmentList;
+            }
+
+            return appointmentList;
+        }
+
         public List<Appointment> getAppointmentByIdentityCardData(string identityCard)
         {
             List<Appointment> appointmentList = new List<Appointment>();

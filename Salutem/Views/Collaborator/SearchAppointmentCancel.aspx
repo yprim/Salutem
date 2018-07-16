@@ -42,10 +42,13 @@
     <script>
         $(document).ready(function () {
 
+            var identityCard = '<%= Session["identityCard"].ToString() %>';
+
             $.ajax({
-                url: '../../../SalutemService.asmx/getAllAppointmentsBusiness',
+                url: '../../../SalutemService.asmx/getAllAppointmentsBusinessFilters',
                 type: 'POST',
                 dataType: 'text',
+                data: { identityCard: identityCard },
                 beforeSend: function () {
                     $('#loadData').show();/*Se muestra el gif de carga antes de
                     solicitar los datos a la bd*/
@@ -110,13 +113,13 @@
 
             /*Se hace la busqueda de la aplicación de acuerdo a lo que ingreso el usuario*/
             $('#app_search').keyup(function () {
-                var identityCard = $(this).val();
+                var date = $(this).val();
 
                 $.ajax({
-                    url: '../../../SalutemService.asmx/getAppointmentByIdentityCardBusiness',
+                    url: '../../../SalutemService.asmx/getAllAppointmentsBusinessFilters',
                     type: 'POST',
                     dataType: 'text',
-                    data: { identityCard: identityCard },
+                    data: { identityCard: identityCard, date: date},
                     beforeSend: function () {
                         $('#loadData').show();/*Se muestra el gif de carga antes de
                         solicitar los datos a la bd*/
@@ -196,7 +199,6 @@
                     <li><a id="menuAppointmentInsert" runat="server">Agendar cita</a></li>
                     <li><a id="menuAppointmentCancel" runat="server">Cancelar cita</a></li> 
                     <li><a id="menuAppointmentUpdate" runat="server">Actualizar cita</a></li>
-                    <li><a id="menuAppointmentGet" runat="server"> Obtener cita</a></li>
                 </ul>
             </li>
 
